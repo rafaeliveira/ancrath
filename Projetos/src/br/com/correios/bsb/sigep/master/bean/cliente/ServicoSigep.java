@@ -1,369 +1,233 @@
-/**
- * ServicoSigep.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ServicoSigep  implements java.io.Serializable {
-    private br.com.correios.bsb.sigep.master.bean.cliente.CategoriaServico categoriaServico;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private br.com.correios.bsb.sigep.master.bean.cliente.ChancelaMaster chancela;
 
-    private java.lang.Boolean exigeDimensoes;
+/**
+ * <p>Java class for servicoSigep complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="servicoSigep">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="categoriaServico" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}categoriaServico" minOccurs="0"/>
+ *         &lt;element name="chancela" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}chancelaMaster" minOccurs="0"/>
+ *         &lt;element name="exigeDimensoes" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="exigeValorCobrar" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="imitm" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="servico" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="servicoERP" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}servicoERP" minOccurs="0"/>
+ *         &lt;element name="ssiCoCodigoPostal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "servicoSigep", propOrder = {
+    "categoriaServico",
+    "chancela",
+    "exigeDimensoes",
+    "exigeValorCobrar",
+    "imitm",
+    "servico",
+    "servicoERP",
+    "ssiCoCodigoPostal"
+})
+public class ServicoSigep {
 
-    private java.lang.Boolean exigeValorCobrar;
-
-    private long imitm;
-
-    private long servico;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP servicoERP;
-
-    private java.lang.String ssiCoCodigoPostal;
-
-    public ServicoSigep() {
-    }
-
-    public ServicoSigep(
-           br.com.correios.bsb.sigep.master.bean.cliente.CategoriaServico categoriaServico,
-           br.com.correios.bsb.sigep.master.bean.cliente.ChancelaMaster chancela,
-           java.lang.Boolean exigeDimensoes,
-           java.lang.Boolean exigeValorCobrar,
-           long imitm,
-           long servico,
-           br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP servicoERP,
-           java.lang.String ssiCoCodigoPostal) {
-           this.categoriaServico = categoriaServico;
-           this.chancela = chancela;
-           this.exigeDimensoes = exigeDimensoes;
-           this.exigeValorCobrar = exigeValorCobrar;
-           this.imitm = imitm;
-           this.servico = servico;
-           this.servicoERP = servicoERP;
-           this.ssiCoCodigoPostal = ssiCoCodigoPostal;
-    }
-
+    protected CategoriaServico categoriaServico;
+    protected ChancelaMaster chancela;
+    protected Boolean exigeDimensoes;
+    protected Boolean exigeValorCobrar;
+    protected long imitm;
+    protected long servico;
+    protected ServicoERP servicoERP;
+    protected String ssiCoCodigoPostal;
 
     /**
-     * Gets the categoriaServico value for this ServicoSigep.
+     * Gets the value of the categoriaServico property.
      * 
-     * @return categoriaServico
+     * @return
+     *     possible object is
+     *     {@link CategoriaServico }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.CategoriaServico getCategoriaServico() {
+    public CategoriaServico getCategoriaServico() {
         return categoriaServico;
     }
 
-
     /**
-     * Sets the categoriaServico value for this ServicoSigep.
+     * Sets the value of the categoriaServico property.
      * 
-     * @param categoriaServico
+     * @param value
+     *     allowed object is
+     *     {@link CategoriaServico }
+     *     
      */
-    public void setCategoriaServico(br.com.correios.bsb.sigep.master.bean.cliente.CategoriaServico categoriaServico) {
-        this.categoriaServico = categoriaServico;
+    public void setCategoriaServico(CategoriaServico value) {
+        this.categoriaServico = value;
     }
 
-
     /**
-     * Gets the chancela value for this ServicoSigep.
+     * Gets the value of the chancela property.
      * 
-     * @return chancela
+     * @return
+     *     possible object is
+     *     {@link ChancelaMaster }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ChancelaMaster getChancela() {
+    public ChancelaMaster getChancela() {
         return chancela;
     }
 
-
     /**
-     * Sets the chancela value for this ServicoSigep.
+     * Sets the value of the chancela property.
      * 
-     * @param chancela
+     * @param value
+     *     allowed object is
+     *     {@link ChancelaMaster }
+     *     
      */
-    public void setChancela(br.com.correios.bsb.sigep.master.bean.cliente.ChancelaMaster chancela) {
-        this.chancela = chancela;
+    public void setChancela(ChancelaMaster value) {
+        this.chancela = value;
     }
 
-
     /**
-     * Gets the exigeDimensoes value for this ServicoSigep.
+     * Gets the value of the exigeDimensoes property.
      * 
-     * @return exigeDimensoes
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getExigeDimensoes() {
+    public Boolean isExigeDimensoes() {
         return exigeDimensoes;
     }
 
-
     /**
-     * Sets the exigeDimensoes value for this ServicoSigep.
+     * Sets the value of the exigeDimensoes property.
      * 
-     * @param exigeDimensoes
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setExigeDimensoes(java.lang.Boolean exigeDimensoes) {
-        this.exigeDimensoes = exigeDimensoes;
+    public void setExigeDimensoes(Boolean value) {
+        this.exigeDimensoes = value;
     }
 
-
     /**
-     * Gets the exigeValorCobrar value for this ServicoSigep.
+     * Gets the value of the exigeValorCobrar property.
      * 
-     * @return exigeValorCobrar
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getExigeValorCobrar() {
+    public Boolean isExigeValorCobrar() {
         return exigeValorCobrar;
     }
 
-
     /**
-     * Sets the exigeValorCobrar value for this ServicoSigep.
+     * Sets the value of the exigeValorCobrar property.
      * 
-     * @param exigeValorCobrar
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setExigeValorCobrar(java.lang.Boolean exigeValorCobrar) {
-        this.exigeValorCobrar = exigeValorCobrar;
+    public void setExigeValorCobrar(Boolean value) {
+        this.exigeValorCobrar = value;
     }
 
-
     /**
-     * Gets the imitm value for this ServicoSigep.
+     * Gets the value of the imitm property.
      * 
-     * @return imitm
      */
     public long getImitm() {
         return imitm;
     }
 
-
     /**
-     * Sets the imitm value for this ServicoSigep.
+     * Sets the value of the imitm property.
      * 
-     * @param imitm
      */
-    public void setImitm(long imitm) {
-        this.imitm = imitm;
+    public void setImitm(long value) {
+        this.imitm = value;
     }
 
-
     /**
-     * Gets the servico value for this ServicoSigep.
+     * Gets the value of the servico property.
      * 
-     * @return servico
      */
     public long getServico() {
         return servico;
     }
 
-
     /**
-     * Sets the servico value for this ServicoSigep.
+     * Sets the value of the servico property.
      * 
-     * @param servico
      */
-    public void setServico(long servico) {
-        this.servico = servico;
+    public void setServico(long value) {
+        this.servico = value;
     }
 
-
     /**
-     * Gets the servicoERP value for this ServicoSigep.
+     * Gets the value of the servicoERP property.
      * 
-     * @return servicoERP
+     * @return
+     *     possible object is
+     *     {@link ServicoERP }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP getServicoERP() {
+    public ServicoERP getServicoERP() {
         return servicoERP;
     }
 
-
     /**
-     * Sets the servicoERP value for this ServicoSigep.
+     * Sets the value of the servicoERP property.
      * 
-     * @param servicoERP
+     * @param value
+     *     allowed object is
+     *     {@link ServicoERP }
+     *     
      */
-    public void setServicoERP(br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP servicoERP) {
-        this.servicoERP = servicoERP;
+    public void setServicoERP(ServicoERP value) {
+        this.servicoERP = value;
     }
 
-
     /**
-     * Gets the ssiCoCodigoPostal value for this ServicoSigep.
+     * Gets the value of the ssiCoCodigoPostal property.
      * 
-     * @return ssiCoCodigoPostal
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSsiCoCodigoPostal() {
+    public String getSsiCoCodigoPostal() {
         return ssiCoCodigoPostal;
     }
 
-
     /**
-     * Sets the ssiCoCodigoPostal value for this ServicoSigep.
+     * Sets the value of the ssiCoCodigoPostal property.
      * 
-     * @param ssiCoCodigoPostal
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSsiCoCodigoPostal(java.lang.String ssiCoCodigoPostal) {
-        this.ssiCoCodigoPostal = ssiCoCodigoPostal;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ServicoSigep)) return false;
-        ServicoSigep other = (ServicoSigep) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.categoriaServico==null && other.getCategoriaServico()==null) || 
-             (this.categoriaServico!=null &&
-              this.categoriaServico.equals(other.getCategoriaServico()))) &&
-            ((this.chancela==null && other.getChancela()==null) || 
-             (this.chancela!=null &&
-              this.chancela.equals(other.getChancela()))) &&
-            ((this.exigeDimensoes==null && other.getExigeDimensoes()==null) || 
-             (this.exigeDimensoes!=null &&
-              this.exigeDimensoes.equals(other.getExigeDimensoes()))) &&
-            ((this.exigeValorCobrar==null && other.getExigeValorCobrar()==null) || 
-             (this.exigeValorCobrar!=null &&
-              this.exigeValorCobrar.equals(other.getExigeValorCobrar()))) &&
-            this.imitm == other.getImitm() &&
-            this.servico == other.getServico() &&
-            ((this.servicoERP==null && other.getServicoERP()==null) || 
-             (this.servicoERP!=null &&
-              this.servicoERP.equals(other.getServicoERP()))) &&
-            ((this.ssiCoCodigoPostal==null && other.getSsiCoCodigoPostal()==null) || 
-             (this.ssiCoCodigoPostal!=null &&
-              this.ssiCoCodigoPostal.equals(other.getSsiCoCodigoPostal())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCategoriaServico() != null) {
-            _hashCode += getCategoriaServico().hashCode();
-        }
-        if (getChancela() != null) {
-            _hashCode += getChancela().hashCode();
-        }
-        if (getExigeDimensoes() != null) {
-            _hashCode += getExigeDimensoes().hashCode();
-        }
-        if (getExigeValorCobrar() != null) {
-            _hashCode += getExigeValorCobrar().hashCode();
-        }
-        _hashCode += new Long(getImitm()).hashCode();
-        _hashCode += new Long(getServico()).hashCode();
-        if (getServicoERP() != null) {
-            _hashCode += getServicoERP().hashCode();
-        }
-        if (getSsiCoCodigoPostal() != null) {
-            _hashCode += getSsiCoCodigoPostal().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ServicoSigep.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoSigep"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("categoriaServico");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "categoriaServico"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "categoriaServico"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chancela");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "chancela"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "chancelaMaster"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("exigeDimensoes");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "exigeDimensoes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("exigeValorCobrar");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "exigeValorCobrar"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("imitm");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "imitm"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servico");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servico"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servicoERP");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servicoERP"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ssiCoCodigoPostal");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "ssiCoCodigoPostal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSsiCoCodigoPostal(String value) {
+        this.ssiCoCodigoPostal = value;
     }
 
 }

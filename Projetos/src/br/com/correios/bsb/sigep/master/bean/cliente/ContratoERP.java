@@ -1,798 +1,552 @@
-/**
- * ContratoERP.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ContratoERP  implements java.io.Serializable {
-    private br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP[] cartoesPostagem;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ClienteERP cliente;
-
-    private long codigoCliente;
-
-    private java.lang.String codigoDiretoria;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ContratoERPPK contratoPK;
-
-    private java.util.Calendar dataAtualizacao;
-
-    private java.lang.String dataAtualizacaoDDMMYYYY;
-
-    private java.util.Calendar dataVigenciaFim;
-
-    private java.lang.String dataVigenciaFimDDMMYYYY;
-
-    private java.util.Calendar dataVigenciaInicio;
-
-    private java.lang.String dataVigenciaInicioDDMMYYYY;
-
-    private java.lang.Integer datajAtualizacao;
-
-    private java.lang.Integer datajVigenciaFim;
-
-    private java.lang.Integer datajVigenciaInicio;
-
-    private java.lang.String descricaoDiretoriaRegional;
-
-    private java.lang.String descricaoStatus;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP diretoriaRegional;
-
-    private java.lang.Integer horajAtualizacao;
-
-    private java.lang.String statusCodigo;
-
-    public ContratoERP() {
-    }
-
-    public ContratoERP(
-           br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP[] cartoesPostagem,
-           br.com.correios.bsb.sigep.master.bean.cliente.ClienteERP cliente,
-           long codigoCliente,
-           java.lang.String codigoDiretoria,
-           br.com.correios.bsb.sigep.master.bean.cliente.ContratoERPPK contratoPK,
-           java.util.Calendar dataAtualizacao,
-           java.lang.String dataAtualizacaoDDMMYYYY,
-           java.util.Calendar dataVigenciaFim,
-           java.lang.String dataVigenciaFimDDMMYYYY,
-           java.util.Calendar dataVigenciaInicio,
-           java.lang.String dataVigenciaInicioDDMMYYYY,
-           java.lang.Integer datajAtualizacao,
-           java.lang.Integer datajVigenciaFim,
-           java.lang.Integer datajVigenciaInicio,
-           java.lang.String descricaoDiretoriaRegional,
-           java.lang.String descricaoStatus,
-           br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP diretoriaRegional,
-           java.lang.Integer horajAtualizacao,
-           java.lang.String statusCodigo) {
-           this.cartoesPostagem = cartoesPostagem;
-           this.cliente = cliente;
-           this.codigoCliente = codigoCliente;
-           this.codigoDiretoria = codigoDiretoria;
-           this.contratoPK = contratoPK;
-           this.dataAtualizacao = dataAtualizacao;
-           this.dataAtualizacaoDDMMYYYY = dataAtualizacaoDDMMYYYY;
-           this.dataVigenciaFim = dataVigenciaFim;
-           this.dataVigenciaFimDDMMYYYY = dataVigenciaFimDDMMYYYY;
-           this.dataVigenciaInicio = dataVigenciaInicio;
-           this.dataVigenciaInicioDDMMYYYY = dataVigenciaInicioDDMMYYYY;
-           this.datajAtualizacao = datajAtualizacao;
-           this.datajVigenciaFim = datajVigenciaFim;
-           this.datajVigenciaInicio = datajVigenciaInicio;
-           this.descricaoDiretoriaRegional = descricaoDiretoriaRegional;
-           this.descricaoStatus = descricaoStatus;
-           this.diretoriaRegional = diretoriaRegional;
-           this.horajAtualizacao = horajAtualizacao;
-           this.statusCodigo = statusCodigo;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
-    /**
-     * Gets the cartoesPostagem value for this ContratoERP.
-     * 
-     * @return cartoesPostagem
-     */
-    public br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP[] getCartoesPostagem() {
-        return cartoesPostagem;
-    }
+/**
+ * <p>Java class for contratoERP complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="contratoERP">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="cartoesPostagem" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}cartaoPostagemERP" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="cliente" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}clienteERP" minOccurs="0"/>
+ *         &lt;element name="codigoCliente" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="codigoDiretoria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="contratoPK" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}contratoERPPK" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacaoDDMMYYYY" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaFim" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaFimDDMMYYYY" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaInicio" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaInicioDDMMYYYY" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="datajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="datajVigenciaFim" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="datajVigenciaInicio" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="descricaoDiretoriaRegional" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="descricaoStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="diretoriaRegional" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}unidadePostagemERP" minOccurs="0"/>
+ *         &lt;element name="horajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="statusCodigo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "contratoERP", propOrder = {
+    "cartoesPostagem",
+    "cliente",
+    "codigoCliente",
+    "codigoDiretoria",
+    "contratoPK",
+    "dataAtualizacao",
+    "dataAtualizacaoDDMMYYYY",
+    "dataVigenciaFim",
+    "dataVigenciaFimDDMMYYYY",
+    "dataVigenciaInicio",
+    "dataVigenciaInicioDDMMYYYY",
+    "datajAtualizacao",
+    "datajVigenciaFim",
+    "datajVigenciaInicio",
+    "descricaoDiretoriaRegional",
+    "descricaoStatus",
+    "diretoriaRegional",
+    "horajAtualizacao",
+    "statusCodigo"
+})
+public class ContratoERP {
 
-
-    /**
-     * Sets the cartoesPostagem value for this ContratoERP.
-     * 
-     * @param cartoesPostagem
-     */
-    public void setCartoesPostagem(br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP[] cartoesPostagem) {
-        this.cartoesPostagem = cartoesPostagem;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP getCartoesPostagem(int i) {
-        return this.cartoesPostagem[i];
-    }
-
-    public void setCartoesPostagem(int i, br.com.correios.bsb.sigep.master.bean.cliente.CartaoPostagemERP _value) {
-        this.cartoesPostagem[i] = _value;
-    }
-
+    @XmlElement(nillable = true)
+    protected List<CartaoPostagemERP> cartoesPostagem;
+    protected ClienteERP cliente;
+    protected long codigoCliente;
+    protected String codigoDiretoria;
+    protected ContratoERPPK contratoPK;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataAtualizacao;
+    protected String dataAtualizacaoDDMMYYYY;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataVigenciaFim;
+    protected String dataVigenciaFimDDMMYYYY;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataVigenciaInicio;
+    protected String dataVigenciaInicioDDMMYYYY;
+    protected Integer datajAtualizacao;
+    protected Integer datajVigenciaFim;
+    protected Integer datajVigenciaInicio;
+    protected String descricaoDiretoriaRegional;
+    protected String descricaoStatus;
+    protected UnidadePostagemERP diretoriaRegional;
+    protected Integer horajAtualizacao;
+    protected String statusCodigo;
 
     /**
-     * Gets the cliente value for this ContratoERP.
+     * Gets the value of the cartoesPostagem property.
      * 
-     * @return cliente
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the cartoesPostagem property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCartoesPostagem().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CartaoPostagemERP }
+     * 
+     * 
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ClienteERP getCliente() {
+    public List<CartaoPostagemERP> getCartoesPostagem() {
+        if (cartoesPostagem == null) {
+            cartoesPostagem = new ArrayList<CartaoPostagemERP>();
+        }
+        return this.cartoesPostagem;
+    }
+
+    /**
+     * Gets the value of the cliente property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ClienteERP }
+     *     
+     */
+    public ClienteERP getCliente() {
         return cliente;
     }
 
-
     /**
-     * Sets the cliente value for this ContratoERP.
+     * Sets the value of the cliente property.
      * 
-     * @param cliente
+     * @param value
+     *     allowed object is
+     *     {@link ClienteERP }
+     *     
      */
-    public void setCliente(br.com.correios.bsb.sigep.master.bean.cliente.ClienteERP cliente) {
-        this.cliente = cliente;
+    public void setCliente(ClienteERP value) {
+        this.cliente = value;
     }
 
-
     /**
-     * Gets the codigoCliente value for this ContratoERP.
+     * Gets the value of the codigoCliente property.
      * 
-     * @return codigoCliente
      */
     public long getCodigoCliente() {
         return codigoCliente;
     }
 
-
     /**
-     * Sets the codigoCliente value for this ContratoERP.
+     * Sets the value of the codigoCliente property.
      * 
-     * @param codigoCliente
      */
-    public void setCodigoCliente(long codigoCliente) {
-        this.codigoCliente = codigoCliente;
+    public void setCodigoCliente(long value) {
+        this.codigoCliente = value;
     }
 
-
     /**
-     * Gets the codigoDiretoria value for this ContratoERP.
+     * Gets the value of the codigoDiretoria property.
      * 
-     * @return codigoDiretoria
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoDiretoria() {
+    public String getCodigoDiretoria() {
         return codigoDiretoria;
     }
 
-
     /**
-     * Sets the codigoDiretoria value for this ContratoERP.
+     * Sets the value of the codigoDiretoria property.
      * 
-     * @param codigoDiretoria
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoDiretoria(java.lang.String codigoDiretoria) {
-        this.codigoDiretoria = codigoDiretoria;
+    public void setCodigoDiretoria(String value) {
+        this.codigoDiretoria = value;
     }
 
-
     /**
-     * Gets the contratoPK value for this ContratoERP.
+     * Gets the value of the contratoPK property.
      * 
-     * @return contratoPK
+     * @return
+     *     possible object is
+     *     {@link ContratoERPPK }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ContratoERPPK getContratoPK() {
+    public ContratoERPPK getContratoPK() {
         return contratoPK;
     }
 
-
     /**
-     * Sets the contratoPK value for this ContratoERP.
+     * Sets the value of the contratoPK property.
      * 
-     * @param contratoPK
+     * @param value
+     *     allowed object is
+     *     {@link ContratoERPPK }
+     *     
      */
-    public void setContratoPK(br.com.correios.bsb.sigep.master.bean.cliente.ContratoERPPK contratoPK) {
-        this.contratoPK = contratoPK;
+    public void setContratoPK(ContratoERPPK value) {
+        this.contratoPK = value;
     }
 
-
     /**
-     * Gets the dataAtualizacao value for this ContratoERP.
+     * Gets the value of the dataAtualizacao property.
      * 
-     * @return dataAtualizacao
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataAtualizacao() {
+    public XMLGregorianCalendar getDataAtualizacao() {
         return dataAtualizacao;
     }
 
-
     /**
-     * Sets the dataAtualizacao value for this ContratoERP.
+     * Sets the value of the dataAtualizacao property.
      * 
-     * @param dataAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataAtualizacao(java.util.Calendar dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
+    public void setDataAtualizacao(XMLGregorianCalendar value) {
+        this.dataAtualizacao = value;
     }
 
-
     /**
-     * Gets the dataAtualizacaoDDMMYYYY value for this ContratoERP.
+     * Gets the value of the dataAtualizacaoDDMMYYYY property.
      * 
-     * @return dataAtualizacaoDDMMYYYY
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataAtualizacaoDDMMYYYY() {
+    public String getDataAtualizacaoDDMMYYYY() {
         return dataAtualizacaoDDMMYYYY;
     }
 
-
     /**
-     * Sets the dataAtualizacaoDDMMYYYY value for this ContratoERP.
+     * Sets the value of the dataAtualizacaoDDMMYYYY property.
      * 
-     * @param dataAtualizacaoDDMMYYYY
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataAtualizacaoDDMMYYYY(java.lang.String dataAtualizacaoDDMMYYYY) {
-        this.dataAtualizacaoDDMMYYYY = dataAtualizacaoDDMMYYYY;
+    public void setDataAtualizacaoDDMMYYYY(String value) {
+        this.dataAtualizacaoDDMMYYYY = value;
     }
 
-
     /**
-     * Gets the dataVigenciaFim value for this ContratoERP.
+     * Gets the value of the dataVigenciaFim property.
      * 
-     * @return dataVigenciaFim
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataVigenciaFim() {
+    public XMLGregorianCalendar getDataVigenciaFim() {
         return dataVigenciaFim;
     }
 
-
     /**
-     * Sets the dataVigenciaFim value for this ContratoERP.
+     * Sets the value of the dataVigenciaFim property.
      * 
-     * @param dataVigenciaFim
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataVigenciaFim(java.util.Calendar dataVigenciaFim) {
-        this.dataVigenciaFim = dataVigenciaFim;
+    public void setDataVigenciaFim(XMLGregorianCalendar value) {
+        this.dataVigenciaFim = value;
     }
 
-
     /**
-     * Gets the dataVigenciaFimDDMMYYYY value for this ContratoERP.
+     * Gets the value of the dataVigenciaFimDDMMYYYY property.
      * 
-     * @return dataVigenciaFimDDMMYYYY
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataVigenciaFimDDMMYYYY() {
+    public String getDataVigenciaFimDDMMYYYY() {
         return dataVigenciaFimDDMMYYYY;
     }
 
-
     /**
-     * Sets the dataVigenciaFimDDMMYYYY value for this ContratoERP.
+     * Sets the value of the dataVigenciaFimDDMMYYYY property.
      * 
-     * @param dataVigenciaFimDDMMYYYY
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataVigenciaFimDDMMYYYY(java.lang.String dataVigenciaFimDDMMYYYY) {
-        this.dataVigenciaFimDDMMYYYY = dataVigenciaFimDDMMYYYY;
+    public void setDataVigenciaFimDDMMYYYY(String value) {
+        this.dataVigenciaFimDDMMYYYY = value;
     }
 
-
     /**
-     * Gets the dataVigenciaInicio value for this ContratoERP.
+     * Gets the value of the dataVigenciaInicio property.
      * 
-     * @return dataVigenciaInicio
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataVigenciaInicio() {
+    public XMLGregorianCalendar getDataVigenciaInicio() {
         return dataVigenciaInicio;
     }
 
-
     /**
-     * Sets the dataVigenciaInicio value for this ContratoERP.
+     * Sets the value of the dataVigenciaInicio property.
      * 
-     * @param dataVigenciaInicio
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataVigenciaInicio(java.util.Calendar dataVigenciaInicio) {
-        this.dataVigenciaInicio = dataVigenciaInicio;
+    public void setDataVigenciaInicio(XMLGregorianCalendar value) {
+        this.dataVigenciaInicio = value;
     }
 
-
     /**
-     * Gets the dataVigenciaInicioDDMMYYYY value for this ContratoERP.
+     * Gets the value of the dataVigenciaInicioDDMMYYYY property.
      * 
-     * @return dataVigenciaInicioDDMMYYYY
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataVigenciaInicioDDMMYYYY() {
+    public String getDataVigenciaInicioDDMMYYYY() {
         return dataVigenciaInicioDDMMYYYY;
     }
 
-
     /**
-     * Sets the dataVigenciaInicioDDMMYYYY value for this ContratoERP.
+     * Sets the value of the dataVigenciaInicioDDMMYYYY property.
      * 
-     * @param dataVigenciaInicioDDMMYYYY
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataVigenciaInicioDDMMYYYY(java.lang.String dataVigenciaInicioDDMMYYYY) {
-        this.dataVigenciaInicioDDMMYYYY = dataVigenciaInicioDDMMYYYY;
+    public void setDataVigenciaInicioDDMMYYYY(String value) {
+        this.dataVigenciaInicioDDMMYYYY = value;
     }
 
-
     /**
-     * Gets the datajAtualizacao value for this ContratoERP.
+     * Gets the value of the datajAtualizacao property.
      * 
-     * @return datajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajAtualizacao() {
+    public Integer getDatajAtualizacao() {
         return datajAtualizacao;
     }
 
-
     /**
-     * Sets the datajAtualizacao value for this ContratoERP.
+     * Sets the value of the datajAtualizacao property.
      * 
-     * @param datajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajAtualizacao(java.lang.Integer datajAtualizacao) {
-        this.datajAtualizacao = datajAtualizacao;
+    public void setDatajAtualizacao(Integer value) {
+        this.datajAtualizacao = value;
     }
 
-
     /**
-     * Gets the datajVigenciaFim value for this ContratoERP.
+     * Gets the value of the datajVigenciaFim property.
      * 
-     * @return datajVigenciaFim
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajVigenciaFim() {
+    public Integer getDatajVigenciaFim() {
         return datajVigenciaFim;
     }
 
-
     /**
-     * Sets the datajVigenciaFim value for this ContratoERP.
+     * Sets the value of the datajVigenciaFim property.
      * 
-     * @param datajVigenciaFim
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajVigenciaFim(java.lang.Integer datajVigenciaFim) {
-        this.datajVigenciaFim = datajVigenciaFim;
+    public void setDatajVigenciaFim(Integer value) {
+        this.datajVigenciaFim = value;
     }
 
-
     /**
-     * Gets the datajVigenciaInicio value for this ContratoERP.
+     * Gets the value of the datajVigenciaInicio property.
      * 
-     * @return datajVigenciaInicio
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajVigenciaInicio() {
+    public Integer getDatajVigenciaInicio() {
         return datajVigenciaInicio;
     }
 
-
     /**
-     * Sets the datajVigenciaInicio value for this ContratoERP.
+     * Sets the value of the datajVigenciaInicio property.
      * 
-     * @param datajVigenciaInicio
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajVigenciaInicio(java.lang.Integer datajVigenciaInicio) {
-        this.datajVigenciaInicio = datajVigenciaInicio;
+    public void setDatajVigenciaInicio(Integer value) {
+        this.datajVigenciaInicio = value;
     }
 
-
     /**
-     * Gets the descricaoDiretoriaRegional value for this ContratoERP.
+     * Gets the value of the descricaoDiretoriaRegional property.
      * 
-     * @return descricaoDiretoriaRegional
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricaoDiretoriaRegional() {
+    public String getDescricaoDiretoriaRegional() {
         return descricaoDiretoriaRegional;
     }
 
-
     /**
-     * Sets the descricaoDiretoriaRegional value for this ContratoERP.
+     * Sets the value of the descricaoDiretoriaRegional property.
      * 
-     * @param descricaoDiretoriaRegional
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricaoDiretoriaRegional(java.lang.String descricaoDiretoriaRegional) {
-        this.descricaoDiretoriaRegional = descricaoDiretoriaRegional;
+    public void setDescricaoDiretoriaRegional(String value) {
+        this.descricaoDiretoriaRegional = value;
     }
 
-
     /**
-     * Gets the descricaoStatus value for this ContratoERP.
+     * Gets the value of the descricaoStatus property.
      * 
-     * @return descricaoStatus
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricaoStatus() {
+    public String getDescricaoStatus() {
         return descricaoStatus;
     }
 
-
     /**
-     * Sets the descricaoStatus value for this ContratoERP.
+     * Sets the value of the descricaoStatus property.
      * 
-     * @param descricaoStatus
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricaoStatus(java.lang.String descricaoStatus) {
-        this.descricaoStatus = descricaoStatus;
+    public void setDescricaoStatus(String value) {
+        this.descricaoStatus = value;
     }
 
-
     /**
-     * Gets the diretoriaRegional value for this ContratoERP.
+     * Gets the value of the diretoriaRegional property.
      * 
-     * @return diretoriaRegional
+     * @return
+     *     possible object is
+     *     {@link UnidadePostagemERP }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP getDiretoriaRegional() {
+    public UnidadePostagemERP getDiretoriaRegional() {
         return diretoriaRegional;
     }
 
-
     /**
-     * Sets the diretoriaRegional value for this ContratoERP.
+     * Sets the value of the diretoriaRegional property.
      * 
-     * @param diretoriaRegional
+     * @param value
+     *     allowed object is
+     *     {@link UnidadePostagemERP }
+     *     
      */
-    public void setDiretoriaRegional(br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP diretoriaRegional) {
-        this.diretoriaRegional = diretoriaRegional;
+    public void setDiretoriaRegional(UnidadePostagemERP value) {
+        this.diretoriaRegional = value;
     }
 
-
     /**
-     * Gets the horajAtualizacao value for this ContratoERP.
+     * Gets the value of the horajAtualizacao property.
      * 
-     * @return horajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getHorajAtualizacao() {
+    public Integer getHorajAtualizacao() {
         return horajAtualizacao;
     }
 
-
     /**
-     * Sets the horajAtualizacao value for this ContratoERP.
+     * Sets the value of the horajAtualizacao property.
      * 
-     * @param horajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setHorajAtualizacao(java.lang.Integer horajAtualizacao) {
-        this.horajAtualizacao = horajAtualizacao;
+    public void setHorajAtualizacao(Integer value) {
+        this.horajAtualizacao = value;
     }
 
-
     /**
-     * Gets the statusCodigo value for this ContratoERP.
+     * Gets the value of the statusCodigo property.
      * 
-     * @return statusCodigo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatusCodigo() {
+    public String getStatusCodigo() {
         return statusCodigo;
     }
 
-
     /**
-     * Sets the statusCodigo value for this ContratoERP.
+     * Sets the value of the statusCodigo property.
      * 
-     * @param statusCodigo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatusCodigo(java.lang.String statusCodigo) {
-        this.statusCodigo = statusCodigo;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ContratoERP)) return false;
-        ContratoERP other = (ContratoERP) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.cartoesPostagem==null && other.getCartoesPostagem()==null) || 
-             (this.cartoesPostagem!=null &&
-              java.util.Arrays.equals(this.cartoesPostagem, other.getCartoesPostagem()))) &&
-            ((this.cliente==null && other.getCliente()==null) || 
-             (this.cliente!=null &&
-              this.cliente.equals(other.getCliente()))) &&
-            this.codigoCliente == other.getCodigoCliente() &&
-            ((this.codigoDiretoria==null && other.getCodigoDiretoria()==null) || 
-             (this.codigoDiretoria!=null &&
-              this.codigoDiretoria.equals(other.getCodigoDiretoria()))) &&
-            ((this.contratoPK==null && other.getContratoPK()==null) || 
-             (this.contratoPK!=null &&
-              this.contratoPK.equals(other.getContratoPK()))) &&
-            ((this.dataAtualizacao==null && other.getDataAtualizacao()==null) || 
-             (this.dataAtualizacao!=null &&
-              this.dataAtualizacao.equals(other.getDataAtualizacao()))) &&
-            ((this.dataAtualizacaoDDMMYYYY==null && other.getDataAtualizacaoDDMMYYYY()==null) || 
-             (this.dataAtualizacaoDDMMYYYY!=null &&
-              this.dataAtualizacaoDDMMYYYY.equals(other.getDataAtualizacaoDDMMYYYY()))) &&
-            ((this.dataVigenciaFim==null && other.getDataVigenciaFim()==null) || 
-             (this.dataVigenciaFim!=null &&
-              this.dataVigenciaFim.equals(other.getDataVigenciaFim()))) &&
-            ((this.dataVigenciaFimDDMMYYYY==null && other.getDataVigenciaFimDDMMYYYY()==null) || 
-             (this.dataVigenciaFimDDMMYYYY!=null &&
-              this.dataVigenciaFimDDMMYYYY.equals(other.getDataVigenciaFimDDMMYYYY()))) &&
-            ((this.dataVigenciaInicio==null && other.getDataVigenciaInicio()==null) || 
-             (this.dataVigenciaInicio!=null &&
-              this.dataVigenciaInicio.equals(other.getDataVigenciaInicio()))) &&
-            ((this.dataVigenciaInicioDDMMYYYY==null && other.getDataVigenciaInicioDDMMYYYY()==null) || 
-             (this.dataVigenciaInicioDDMMYYYY!=null &&
-              this.dataVigenciaInicioDDMMYYYY.equals(other.getDataVigenciaInicioDDMMYYYY()))) &&
-            ((this.datajAtualizacao==null && other.getDatajAtualizacao()==null) || 
-             (this.datajAtualizacao!=null &&
-              this.datajAtualizacao.equals(other.getDatajAtualizacao()))) &&
-            ((this.datajVigenciaFim==null && other.getDatajVigenciaFim()==null) || 
-             (this.datajVigenciaFim!=null &&
-              this.datajVigenciaFim.equals(other.getDatajVigenciaFim()))) &&
-            ((this.datajVigenciaInicio==null && other.getDatajVigenciaInicio()==null) || 
-             (this.datajVigenciaInicio!=null &&
-              this.datajVigenciaInicio.equals(other.getDatajVigenciaInicio()))) &&
-            ((this.descricaoDiretoriaRegional==null && other.getDescricaoDiretoriaRegional()==null) || 
-             (this.descricaoDiretoriaRegional!=null &&
-              this.descricaoDiretoriaRegional.equals(other.getDescricaoDiretoriaRegional()))) &&
-            ((this.descricaoStatus==null && other.getDescricaoStatus()==null) || 
-             (this.descricaoStatus!=null &&
-              this.descricaoStatus.equals(other.getDescricaoStatus()))) &&
-            ((this.diretoriaRegional==null && other.getDiretoriaRegional()==null) || 
-             (this.diretoriaRegional!=null &&
-              this.diretoriaRegional.equals(other.getDiretoriaRegional()))) &&
-            ((this.horajAtualizacao==null && other.getHorajAtualizacao()==null) || 
-             (this.horajAtualizacao!=null &&
-              this.horajAtualizacao.equals(other.getHorajAtualizacao()))) &&
-            ((this.statusCodigo==null && other.getStatusCodigo()==null) || 
-             (this.statusCodigo!=null &&
-              this.statusCodigo.equals(other.getStatusCodigo())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCartoesPostagem() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCartoesPostagem());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCartoesPostagem(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCliente() != null) {
-            _hashCode += getCliente().hashCode();
-        }
-        _hashCode += new Long(getCodigoCliente()).hashCode();
-        if (getCodigoDiretoria() != null) {
-            _hashCode += getCodigoDiretoria().hashCode();
-        }
-        if (getContratoPK() != null) {
-            _hashCode += getContratoPK().hashCode();
-        }
-        if (getDataAtualizacao() != null) {
-            _hashCode += getDataAtualizacao().hashCode();
-        }
-        if (getDataAtualizacaoDDMMYYYY() != null) {
-            _hashCode += getDataAtualizacaoDDMMYYYY().hashCode();
-        }
-        if (getDataVigenciaFim() != null) {
-            _hashCode += getDataVigenciaFim().hashCode();
-        }
-        if (getDataVigenciaFimDDMMYYYY() != null) {
-            _hashCode += getDataVigenciaFimDDMMYYYY().hashCode();
-        }
-        if (getDataVigenciaInicio() != null) {
-            _hashCode += getDataVigenciaInicio().hashCode();
-        }
-        if (getDataVigenciaInicioDDMMYYYY() != null) {
-            _hashCode += getDataVigenciaInicioDDMMYYYY().hashCode();
-        }
-        if (getDatajAtualizacao() != null) {
-            _hashCode += getDatajAtualizacao().hashCode();
-        }
-        if (getDatajVigenciaFim() != null) {
-            _hashCode += getDatajVigenciaFim().hashCode();
-        }
-        if (getDatajVigenciaInicio() != null) {
-            _hashCode += getDatajVigenciaInicio().hashCode();
-        }
-        if (getDescricaoDiretoriaRegional() != null) {
-            _hashCode += getDescricaoDiretoriaRegional().hashCode();
-        }
-        if (getDescricaoStatus() != null) {
-            _hashCode += getDescricaoStatus().hashCode();
-        }
-        if (getDiretoriaRegional() != null) {
-            _hashCode += getDiretoriaRegional().hashCode();
-        }
-        if (getHorajAtualizacao() != null) {
-            _hashCode += getHorajAtualizacao().hashCode();
-        }
-        if (getStatusCodigo() != null) {
-            _hashCode += getStatusCodigo().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ContratoERP.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "contratoERP"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cartoesPostagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cartoesPostagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "cartaoPostagemERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cliente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cliente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "clienteERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoCliente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoCliente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoDiretoria");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoDiretoria"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contratoPK");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "contratoPK"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "contratoERPPK"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacaoDDMMYYYY");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacaoDDMMYYYY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaFim");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaFim"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaFimDDMMYYYY");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaFimDDMMYYYY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaInicio");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaInicio"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaInicioDDMMYYYY");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaInicioDDMMYYYY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajVigenciaFim");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajVigenciaFim"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajVigenciaInicio");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajVigenciaInicio"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricaoDiretoriaRegional");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricaoDiretoriaRegional"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricaoStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricaoStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("diretoriaRegional");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "diretoriaRegional"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "unidadePostagemERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("horajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "horajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statusCodigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "statusCodigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStatusCodigo(String value) {
+        this.statusCodigo = value;
     }
 
 }

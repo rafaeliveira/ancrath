@@ -1,453 +1,303 @@
-/**
- * Retorno.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class Retorno  implements java.io.Serializable {
-    private java.lang.Long codigoPI;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String codigoRegistro;
 
-    private java.lang.String codigoRetorno;
+/**
+ * <p>Java class for retorno complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="retorno">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigoPI" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="codigoRegistro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="codigoRetorno" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataPrazoResposta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataRegistro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataResposta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataUltimaRecorrencia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="mensagemRetorno" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="resposta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "retorno", propOrder = {
+    "codigoPI",
+    "codigoRegistro",
+    "codigoRetorno",
+    "dataPrazoResposta",
+    "dataRegistro",
+    "dataResposta",
+    "dataUltimaRecorrencia",
+    "id",
+    "mensagemRetorno",
+    "resposta"
+})
+public class Retorno {
 
-    private java.lang.String dataPrazoResposta;
-
-    private java.lang.String dataRegistro;
-
-    private java.lang.String dataResposta;
-
-    private java.lang.String dataUltimaRecorrencia;
-
-    private java.lang.Long id;
-
-    private java.lang.String mensagemRetorno;
-
-    private java.lang.String resposta;
-
-    public Retorno() {
-    }
-
-    public Retorno(
-           java.lang.Long codigoPI,
-           java.lang.String codigoRegistro,
-           java.lang.String codigoRetorno,
-           java.lang.String dataPrazoResposta,
-           java.lang.String dataRegistro,
-           java.lang.String dataResposta,
-           java.lang.String dataUltimaRecorrencia,
-           java.lang.Long id,
-           java.lang.String mensagemRetorno,
-           java.lang.String resposta) {
-           this.codigoPI = codigoPI;
-           this.codigoRegistro = codigoRegistro;
-           this.codigoRetorno = codigoRetorno;
-           this.dataPrazoResposta = dataPrazoResposta;
-           this.dataRegistro = dataRegistro;
-           this.dataResposta = dataResposta;
-           this.dataUltimaRecorrencia = dataUltimaRecorrencia;
-           this.id = id;
-           this.mensagemRetorno = mensagemRetorno;
-           this.resposta = resposta;
-    }
-
+    protected Long codigoPI;
+    protected String codigoRegistro;
+    protected String codigoRetorno;
+    protected String dataPrazoResposta;
+    protected String dataRegistro;
+    protected String dataResposta;
+    protected String dataUltimaRecorrencia;
+    protected Long id;
+    protected String mensagemRetorno;
+    protected String resposta;
 
     /**
-     * Gets the codigoPI value for this Retorno.
+     * Gets the value of the codigoPI property.
      * 
-     * @return codigoPI
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public java.lang.Long getCodigoPI() {
+    public Long getCodigoPI() {
         return codigoPI;
     }
 
-
     /**
-     * Sets the codigoPI value for this Retorno.
+     * Sets the value of the codigoPI property.
      * 
-     * @param codigoPI
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setCodigoPI(java.lang.Long codigoPI) {
-        this.codigoPI = codigoPI;
+    public void setCodigoPI(Long value) {
+        this.codigoPI = value;
     }
 
-
     /**
-     * Gets the codigoRegistro value for this Retorno.
+     * Gets the value of the codigoRegistro property.
      * 
-     * @return codigoRegistro
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoRegistro() {
+    public String getCodigoRegistro() {
         return codigoRegistro;
     }
 
-
     /**
-     * Sets the codigoRegistro value for this Retorno.
+     * Sets the value of the codigoRegistro property.
      * 
-     * @param codigoRegistro
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoRegistro(java.lang.String codigoRegistro) {
-        this.codigoRegistro = codigoRegistro;
+    public void setCodigoRegistro(String value) {
+        this.codigoRegistro = value;
     }
 
-
     /**
-     * Gets the codigoRetorno value for this Retorno.
+     * Gets the value of the codigoRetorno property.
      * 
-     * @return codigoRetorno
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoRetorno() {
+    public String getCodigoRetorno() {
         return codigoRetorno;
     }
 
-
     /**
-     * Sets the codigoRetorno value for this Retorno.
+     * Sets the value of the codigoRetorno property.
      * 
-     * @param codigoRetorno
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoRetorno(java.lang.String codigoRetorno) {
-        this.codigoRetorno = codigoRetorno;
+    public void setCodigoRetorno(String value) {
+        this.codigoRetorno = value;
     }
 
-
     /**
-     * Gets the dataPrazoResposta value for this Retorno.
+     * Gets the value of the dataPrazoResposta property.
      * 
-     * @return dataPrazoResposta
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataPrazoResposta() {
+    public String getDataPrazoResposta() {
         return dataPrazoResposta;
     }
 
-
     /**
-     * Sets the dataPrazoResposta value for this Retorno.
+     * Sets the value of the dataPrazoResposta property.
      * 
-     * @param dataPrazoResposta
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataPrazoResposta(java.lang.String dataPrazoResposta) {
-        this.dataPrazoResposta = dataPrazoResposta;
+    public void setDataPrazoResposta(String value) {
+        this.dataPrazoResposta = value;
     }
 
-
     /**
-     * Gets the dataRegistro value for this Retorno.
+     * Gets the value of the dataRegistro property.
      * 
-     * @return dataRegistro
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataRegistro() {
+    public String getDataRegistro() {
         return dataRegistro;
     }
 
-
     /**
-     * Sets the dataRegistro value for this Retorno.
+     * Sets the value of the dataRegistro property.
      * 
-     * @param dataRegistro
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataRegistro(java.lang.String dataRegistro) {
-        this.dataRegistro = dataRegistro;
+    public void setDataRegistro(String value) {
+        this.dataRegistro = value;
     }
 
-
     /**
-     * Gets the dataResposta value for this Retorno.
+     * Gets the value of the dataResposta property.
      * 
-     * @return dataResposta
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataResposta() {
+    public String getDataResposta() {
         return dataResposta;
     }
 
-
     /**
-     * Sets the dataResposta value for this Retorno.
+     * Sets the value of the dataResposta property.
      * 
-     * @param dataResposta
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataResposta(java.lang.String dataResposta) {
-        this.dataResposta = dataResposta;
+    public void setDataResposta(String value) {
+        this.dataResposta = value;
     }
 
-
     /**
-     * Gets the dataUltimaRecorrencia value for this Retorno.
+     * Gets the value of the dataUltimaRecorrencia property.
      * 
-     * @return dataUltimaRecorrencia
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDataUltimaRecorrencia() {
+    public String getDataUltimaRecorrencia() {
         return dataUltimaRecorrencia;
     }
 
-
     /**
-     * Sets the dataUltimaRecorrencia value for this Retorno.
+     * Sets the value of the dataUltimaRecorrencia property.
      * 
-     * @param dataUltimaRecorrencia
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDataUltimaRecorrencia(java.lang.String dataUltimaRecorrencia) {
-        this.dataUltimaRecorrencia = dataUltimaRecorrencia;
+    public void setDataUltimaRecorrencia(String value) {
+        this.dataUltimaRecorrencia = value;
     }
 
-
     /**
-     * Gets the id value for this Retorno.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public java.lang.Long getId() {
+    public Long getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this Retorno.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setId(java.lang.Long id) {
-        this.id = id;
+    public void setId(Long value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the mensagemRetorno value for this Retorno.
+     * Gets the value of the mensagemRetorno property.
      * 
-     * @return mensagemRetorno
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMensagemRetorno() {
+    public String getMensagemRetorno() {
         return mensagemRetorno;
     }
 
-
     /**
-     * Sets the mensagemRetorno value for this Retorno.
+     * Sets the value of the mensagemRetorno property.
      * 
-     * @param mensagemRetorno
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMensagemRetorno(java.lang.String mensagemRetorno) {
-        this.mensagemRetorno = mensagemRetorno;
+    public void setMensagemRetorno(String value) {
+        this.mensagemRetorno = value;
     }
 
-
     /**
-     * Gets the resposta value for this Retorno.
+     * Gets the value of the resposta property.
      * 
-     * @return resposta
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getResposta() {
+    public String getResposta() {
         return resposta;
     }
 
-
     /**
-     * Sets the resposta value for this Retorno.
+     * Sets the value of the resposta property.
      * 
-     * @param resposta
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setResposta(java.lang.String resposta) {
-        this.resposta = resposta;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Retorno)) return false;
-        Retorno other = (Retorno) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigoPI==null && other.getCodigoPI()==null) || 
-             (this.codigoPI!=null &&
-              this.codigoPI.equals(other.getCodigoPI()))) &&
-            ((this.codigoRegistro==null && other.getCodigoRegistro()==null) || 
-             (this.codigoRegistro!=null &&
-              this.codigoRegistro.equals(other.getCodigoRegistro()))) &&
-            ((this.codigoRetorno==null && other.getCodigoRetorno()==null) || 
-             (this.codigoRetorno!=null &&
-              this.codigoRetorno.equals(other.getCodigoRetorno()))) &&
-            ((this.dataPrazoResposta==null && other.getDataPrazoResposta()==null) || 
-             (this.dataPrazoResposta!=null &&
-              this.dataPrazoResposta.equals(other.getDataPrazoResposta()))) &&
-            ((this.dataRegistro==null && other.getDataRegistro()==null) || 
-             (this.dataRegistro!=null &&
-              this.dataRegistro.equals(other.getDataRegistro()))) &&
-            ((this.dataResposta==null && other.getDataResposta()==null) || 
-             (this.dataResposta!=null &&
-              this.dataResposta.equals(other.getDataResposta()))) &&
-            ((this.dataUltimaRecorrencia==null && other.getDataUltimaRecorrencia()==null) || 
-             (this.dataUltimaRecorrencia!=null &&
-              this.dataUltimaRecorrencia.equals(other.getDataUltimaRecorrencia()))) &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.mensagemRetorno==null && other.getMensagemRetorno()==null) || 
-             (this.mensagemRetorno!=null &&
-              this.mensagemRetorno.equals(other.getMensagemRetorno()))) &&
-            ((this.resposta==null && other.getResposta()==null) || 
-             (this.resposta!=null &&
-              this.resposta.equals(other.getResposta())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigoPI() != null) {
-            _hashCode += getCodigoPI().hashCode();
-        }
-        if (getCodigoRegistro() != null) {
-            _hashCode += getCodigoRegistro().hashCode();
-        }
-        if (getCodigoRetorno() != null) {
-            _hashCode += getCodigoRetorno().hashCode();
-        }
-        if (getDataPrazoResposta() != null) {
-            _hashCode += getDataPrazoResposta().hashCode();
-        }
-        if (getDataRegistro() != null) {
-            _hashCode += getDataRegistro().hashCode();
-        }
-        if (getDataResposta() != null) {
-            _hashCode += getDataResposta().hashCode();
-        }
-        if (getDataUltimaRecorrencia() != null) {
-            _hashCode += getDataUltimaRecorrencia().hashCode();
-        }
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getMensagemRetorno() != null) {
-            _hashCode += getMensagemRetorno().hashCode();
-        }
-        if (getResposta() != null) {
-            _hashCode += getResposta().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Retorno.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "retorno"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoPI");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoPI"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoRegistro");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoRegistro"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoRetorno");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoRetorno"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataPrazoResposta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataPrazoResposta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataRegistro");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataRegistro"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataResposta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataResposta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataUltimaRecorrencia");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataUltimaRecorrencia"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mensagemRetorno");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "mensagemRetorno"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("resposta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "resposta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setResposta(String value) {
+        this.resposta = value;
     }
 
 }

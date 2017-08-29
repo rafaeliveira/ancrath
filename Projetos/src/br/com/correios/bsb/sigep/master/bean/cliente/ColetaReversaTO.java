@@ -1,337 +1,207 @@
-/**
- * ColetaReversaTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ColetaReversaTO  extends br.com.correios.bsb.sigep.master.bean.cliente.ColetaTO  implements java.io.Serializable {
-    private java.lang.String ag;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Integer ar;
 
-    private java.lang.Long cartao;
+/**
+ * <p>Java class for coletaReversaTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="coletaReversaTO">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://cliente.bean.master.sigep.bsb.correios.com.br/}coletaTO">
+ *       &lt;sequence>
+ *         &lt;element name="ag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ar" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="cartao" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="obj_col" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}objetoTO" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="servico_adicional" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "coletaReversaTO", propOrder = {
+    "ag",
+    "ar",
+    "cartao",
+    "numero",
+    "objCol",
+    "servicoAdicional"
+})
+public class ColetaReversaTO
+    extends ColetaTO
+{
 
-    private java.lang.Integer numero;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO[] obj_col;
-
-    private java.lang.String servico_adicional;
-
-    public ColetaReversaTO() {
-    }
-
-    public ColetaReversaTO(
-           java.lang.String cklist,
-           java.lang.String descricao,
-           java.lang.String id_cliente,
-           br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] produto,
-           br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO remetente,
-           java.lang.String tipo,
-           java.lang.String valor_declarado,
-           java.lang.String ag,
-           java.lang.Integer ar,
-           java.lang.Long cartao,
-           java.lang.Integer numero,
-           br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO[] obj_col,
-           java.lang.String servico_adicional) {
-        super(
-            cklist,
-            descricao,
-            id_cliente,
-            produto,
-            remetente,
-            tipo,
-            valor_declarado);
-        this.ag = ag;
-        this.ar = ar;
-        this.cartao = cartao;
-        this.numero = numero;
-        this.obj_col = obj_col;
-        this.servico_adicional = servico_adicional;
-    }
-
+    protected String ag;
+    protected Integer ar;
+    protected Long cartao;
+    protected Integer numero;
+    @XmlElement(name = "obj_col", nillable = true)
+    protected List<ObjetoTO> objCol;
+    @XmlElement(name = "servico_adicional")
+    protected String servicoAdicional;
 
     /**
-     * Gets the ag value for this ColetaReversaTO.
+     * Gets the value of the ag property.
      * 
-     * @return ag
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAg() {
+    public String getAg() {
         return ag;
     }
 
-
     /**
-     * Sets the ag value for this ColetaReversaTO.
+     * Sets the value of the ag property.
      * 
-     * @param ag
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAg(java.lang.String ag) {
-        this.ag = ag;
+    public void setAg(String value) {
+        this.ag = value;
     }
 
-
     /**
-     * Gets the ar value for this ColetaReversaTO.
+     * Gets the value of the ar property.
      * 
-     * @return ar
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getAr() {
+    public Integer getAr() {
         return ar;
     }
 
-
     /**
-     * Sets the ar value for this ColetaReversaTO.
+     * Sets the value of the ar property.
      * 
-     * @param ar
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setAr(java.lang.Integer ar) {
-        this.ar = ar;
+    public void setAr(Integer value) {
+        this.ar = value;
     }
 
-
     /**
-     * Gets the cartao value for this ColetaReversaTO.
+     * Gets the value of the cartao property.
      * 
-     * @return cartao
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public java.lang.Long getCartao() {
+    public Long getCartao() {
         return cartao;
     }
 
-
     /**
-     * Sets the cartao value for this ColetaReversaTO.
+     * Sets the value of the cartao property.
      * 
-     * @param cartao
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setCartao(java.lang.Long cartao) {
-        this.cartao = cartao;
+    public void setCartao(Long value) {
+        this.cartao = value;
     }
 
-
     /**
-     * Gets the numero value for this ColetaReversaTO.
+     * Gets the value of the numero property.
      * 
-     * @return numero
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getNumero() {
+    public Integer getNumero() {
         return numero;
     }
 
-
     /**
-     * Sets the numero value for this ColetaReversaTO.
+     * Sets the value of the numero property.
      * 
-     * @param numero
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setNumero(java.lang.Integer numero) {
-        this.numero = numero;
+    public void setNumero(Integer value) {
+        this.numero = value;
     }
 
-
     /**
-     * Gets the obj_col value for this ColetaReversaTO.
+     * Gets the value of the objCol property.
      * 
-     * @return obj_col
-     */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO[] getObj_col() {
-        return obj_col;
-    }
-
-
-    /**
-     * Sets the obj_col value for this ColetaReversaTO.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the objCol property.
      * 
-     * @param obj_col
-     */
-    public void setObj_col(br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO[] obj_col) {
-        this.obj_col = obj_col;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO getObj_col(int i) {
-        return this.obj_col[i];
-    }
-
-    public void setObj_col(int i, br.com.correios.bsb.sigep.master.bean.cliente.ObjetoTO _value) {
-        this.obj_col[i] = _value;
-    }
-
-
-    /**
-     * Gets the servico_adicional value for this ColetaReversaTO.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getObjCol().add(newItem);
+     * </pre>
      * 
-     * @return servico_adicional
-     */
-    public java.lang.String getServico_adicional() {
-        return servico_adicional;
-    }
-
-
-    /**
-     * Sets the servico_adicional value for this ColetaReversaTO.
      * 
-     * @param servico_adicional
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ObjetoTO }
+     * 
+     * 
      */
-    public void setServico_adicional(java.lang.String servico_adicional) {
-        this.servico_adicional = servico_adicional;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ColetaReversaTO)) return false;
-        ColetaReversaTO other = (ColetaReversaTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ObjetoTO> getObjCol() {
+        if (objCol == null) {
+            objCol = new ArrayList<ObjetoTO>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.ag==null && other.getAg()==null) || 
-             (this.ag!=null &&
-              this.ag.equals(other.getAg()))) &&
-            ((this.ar==null && other.getAr()==null) || 
-             (this.ar!=null &&
-              this.ar.equals(other.getAr()))) &&
-            ((this.cartao==null && other.getCartao()==null) || 
-             (this.cartao!=null &&
-              this.cartao.equals(other.getCartao()))) &&
-            ((this.numero==null && other.getNumero()==null) || 
-             (this.numero!=null &&
-              this.numero.equals(other.getNumero()))) &&
-            ((this.obj_col==null && other.getObj_col()==null) || 
-             (this.obj_col!=null &&
-              java.util.Arrays.equals(this.obj_col, other.getObj_col()))) &&
-            ((this.servico_adicional==null && other.getServico_adicional()==null) || 
-             (this.servico_adicional!=null &&
-              this.servico_adicional.equals(other.getServico_adicional())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAg() != null) {
-            _hashCode += getAg().hashCode();
-        }
-        if (getAr() != null) {
-            _hashCode += getAr().hashCode();
-        }
-        if (getCartao() != null) {
-            _hashCode += getCartao().hashCode();
-        }
-        if (getNumero() != null) {
-            _hashCode += getNumero().hashCode();
-        }
-        if (getObj_col() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getObj_col());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getObj_col(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getServico_adicional() != null) {
-            _hashCode += getServico_adicional().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ColetaReversaTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "coletaReversaTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ag");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "ag"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ar");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "ar"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cartao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cartao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numero");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "numero"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("obj_col");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "obj_col"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoTO"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servico_adicional");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servico_adicional"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
+        return this.objCol;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the servicoAdicional property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public String getServicoAdicional() {
+        return servicoAdicional;
     }
 
     /**
-     * Get Custom Serializer
+     * Sets the value of the servicoAdicional property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setServicoAdicional(String value) {
+        this.servicoAdicional = value;
     }
 
 }

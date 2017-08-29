@@ -1,288 +1,170 @@
-/**
- * ChancelaMaster.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ChancelaMaster  implements java.io.Serializable {
-    private byte[] chancela;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private java.util.Calendar dataAtualizacao;
 
-    private java.lang.String descricao;
+/**
+ * <p>Java class for chancelaMaster complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="chancelaMaster">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="chancela" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="descricao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="servicosSigep" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}servicoSigep" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "chancelaMaster", propOrder = {
+    "chancela",
+    "dataAtualizacao",
+    "descricao",
+    "id",
+    "servicosSigep"
+})
+public class ChancelaMaster {
 
-    private long id;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep[] servicosSigep;
-
-    public ChancelaMaster() {
-    }
-
-    public ChancelaMaster(
-           byte[] chancela,
-           java.util.Calendar dataAtualizacao,
-           java.lang.String descricao,
-           long id,
-           br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep[] servicosSigep) {
-           this.chancela = chancela;
-           this.dataAtualizacao = dataAtualizacao;
-           this.descricao = descricao;
-           this.id = id;
-           this.servicosSigep = servicosSigep;
-    }
-
+    protected byte[] chancela;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataAtualizacao;
+    protected String descricao;
+    protected long id;
+    @XmlElement(nillable = true)
+    protected List<ServicoSigep> servicosSigep;
 
     /**
-     * Gets the chancela value for this ChancelaMaster.
+     * Gets the value of the chancela property.
      * 
-     * @return chancela
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getChancela() {
         return chancela;
     }
 
-
     /**
-     * Sets the chancela value for this ChancelaMaster.
+     * Sets the value of the chancela property.
      * 
-     * @param chancela
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
-    public void setChancela(byte[] chancela) {
-        this.chancela = chancela;
+    public void setChancela(byte[] value) {
+        this.chancela = value;
     }
 
-
     /**
-     * Gets the dataAtualizacao value for this ChancelaMaster.
+     * Gets the value of the dataAtualizacao property.
      * 
-     * @return dataAtualizacao
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataAtualizacao() {
+    public XMLGregorianCalendar getDataAtualizacao() {
         return dataAtualizacao;
     }
 
-
     /**
-     * Sets the dataAtualizacao value for this ChancelaMaster.
+     * Sets the value of the dataAtualizacao property.
      * 
-     * @param dataAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataAtualizacao(java.util.Calendar dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
+    public void setDataAtualizacao(XMLGregorianCalendar value) {
+        this.dataAtualizacao = value;
     }
 
-
     /**
-     * Gets the descricao value for this ChancelaMaster.
+     * Gets the value of the descricao property.
      * 
-     * @return descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-
     /**
-     * Sets the descricao value for this ChancelaMaster.
+     * Sets the value of the descricao property.
      * 
-     * @param descricao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricao(java.lang.String descricao) {
-        this.descricao = descricao;
+    public void setDescricao(String value) {
+        this.descricao = value;
     }
 
-
     /**
-     * Gets the id value for this ChancelaMaster.
+     * Gets the value of the id property.
      * 
-     * @return id
      */
     public long getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this ChancelaMaster.
+     * Sets the value of the id property.
      * 
-     * @param id
      */
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the servicosSigep value for this ChancelaMaster.
+     * Gets the value of the servicosSigep property.
      * 
-     * @return servicosSigep
-     */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep[] getServicosSigep() {
-        return servicosSigep;
-    }
-
-
-    /**
-     * Sets the servicosSigep value for this ChancelaMaster.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the servicosSigep property.
      * 
-     * @param servicosSigep
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getServicosSigep().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ServicoSigep }
+     * 
+     * 
      */
-    public void setServicosSigep(br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep[] servicosSigep) {
-        this.servicosSigep = servicosSigep;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep getServicosSigep(int i) {
-        return this.servicosSigep[i];
-    }
-
-    public void setServicosSigep(int i, br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep _value) {
-        this.servicosSigep[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ChancelaMaster)) return false;
-        ChancelaMaster other = (ChancelaMaster) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ServicoSigep> getServicosSigep() {
+        if (servicosSigep == null) {
+            servicosSigep = new ArrayList<ServicoSigep>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.chancela==null && other.getChancela()==null) || 
-             (this.chancela!=null &&
-              java.util.Arrays.equals(this.chancela, other.getChancela()))) &&
-            ((this.dataAtualizacao==null && other.getDataAtualizacao()==null) || 
-             (this.dataAtualizacao!=null &&
-              this.dataAtualizacao.equals(other.getDataAtualizacao()))) &&
-            ((this.descricao==null && other.getDescricao()==null) || 
-             (this.descricao!=null &&
-              this.descricao.equals(other.getDescricao()))) &&
-            this.id == other.getId() &&
-            ((this.servicosSigep==null && other.getServicosSigep()==null) || 
-             (this.servicosSigep!=null &&
-              java.util.Arrays.equals(this.servicosSigep, other.getServicosSigep())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getChancela() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getChancela());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getChancela(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDataAtualizacao() != null) {
-            _hashCode += getDataAtualizacao().hashCode();
-        }
-        if (getDescricao() != null) {
-            _hashCode += getDescricao().hashCode();
-        }
-        _hashCode += new Long(getId()).hashCode();
-        if (getServicosSigep() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getServicosSigep());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getServicosSigep(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ChancelaMaster.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "chancelaMaster"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chancela");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "chancela"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servicosSigep");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servicosSigep"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoSigep"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.servicosSigep;
     }
 
 }

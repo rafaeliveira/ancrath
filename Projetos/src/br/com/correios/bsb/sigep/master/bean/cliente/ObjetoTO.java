@@ -1,268 +1,168 @@
-/**
- * ObjetoTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ObjetoTO  implements java.io.Serializable {
-    private java.lang.String desc;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String entrega;
 
-    private java.lang.String id;
+/**
+ * <p>Java class for objetoTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="objetoTO">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="desc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="entrega" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="item" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="num" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "objetoTO", propOrder = {
+    "desc",
+    "entrega",
+    "id",
+    "item",
+    "num"
+})
+public class ObjetoTO {
 
-    private java.lang.String item;
-
-    private java.lang.String num;
-
-    public ObjetoTO() {
-    }
-
-    public ObjetoTO(
-           java.lang.String desc,
-           java.lang.String entrega,
-           java.lang.String id,
-           java.lang.String item,
-           java.lang.String num) {
-           this.desc = desc;
-           this.entrega = entrega;
-           this.id = id;
-           this.item = item;
-           this.num = num;
-    }
-
+    protected String desc;
+    protected String entrega;
+    protected String id;
+    protected String item;
+    protected String num;
 
     /**
-     * Gets the desc value for this ObjetoTO.
+     * Gets the value of the desc property.
      * 
-     * @return desc
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDesc() {
+    public String getDesc() {
         return desc;
     }
 
-
     /**
-     * Sets the desc value for this ObjetoTO.
+     * Sets the value of the desc property.
      * 
-     * @param desc
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDesc(java.lang.String desc) {
-        this.desc = desc;
+    public void setDesc(String value) {
+        this.desc = value;
     }
 
-
     /**
-     * Gets the entrega value for this ObjetoTO.
+     * Gets the value of the entrega property.
      * 
-     * @return entrega
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEntrega() {
+    public String getEntrega() {
         return entrega;
     }
 
-
     /**
-     * Sets the entrega value for this ObjetoTO.
+     * Sets the value of the entrega property.
      * 
-     * @param entrega
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEntrega(java.lang.String entrega) {
-        this.entrega = entrega;
+    public void setEntrega(String value) {
+        this.entrega = value;
     }
 
-
     /**
-     * Gets the id value for this ObjetoTO.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this ObjetoTO.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the item value for this ObjetoTO.
+     * Gets the value of the item property.
      * 
-     * @return item
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getItem() {
+    public String getItem() {
         return item;
     }
 
-
     /**
-     * Sets the item value for this ObjetoTO.
+     * Sets the value of the item property.
      * 
-     * @param item
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setItem(java.lang.String item) {
-        this.item = item;
+    public void setItem(String value) {
+        this.item = value;
     }
 
-
     /**
-     * Gets the num value for this ObjetoTO.
+     * Gets the value of the num property.
      * 
-     * @return num
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNum() {
+    public String getNum() {
         return num;
     }
 
-
     /**
-     * Sets the num value for this ObjetoTO.
+     * Sets the value of the num property.
      * 
-     * @param num
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNum(java.lang.String num) {
-        this.num = num;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ObjetoTO)) return false;
-        ObjetoTO other = (ObjetoTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.desc==null && other.getDesc()==null) || 
-             (this.desc!=null &&
-              this.desc.equals(other.getDesc()))) &&
-            ((this.entrega==null && other.getEntrega()==null) || 
-             (this.entrega!=null &&
-              this.entrega.equals(other.getEntrega()))) &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.item==null && other.getItem()==null) || 
-             (this.item!=null &&
-              this.item.equals(other.getItem()))) &&
-            ((this.num==null && other.getNum()==null) || 
-             (this.num!=null &&
-              this.num.equals(other.getNum())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDesc() != null) {
-            _hashCode += getDesc().hashCode();
-        }
-        if (getEntrega() != null) {
-            _hashCode += getEntrega().hashCode();
-        }
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getItem() != null) {
-            _hashCode += getItem().hashCode();
-        }
-        if (getNum() != null) {
-            _hashCode += getNum().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ObjetoTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("desc");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "desc"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("entrega");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "entrega"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("item");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("num");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "num"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setNum(String value) {
+        this.num = value;
     }
 
 }

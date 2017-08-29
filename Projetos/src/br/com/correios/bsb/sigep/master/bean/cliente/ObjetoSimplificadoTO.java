@@ -1,194 +1,118 @@
-/**
- * ObjetoSimplificadoTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ObjetoSimplificadoTO  implements java.io.Serializable {
-    private java.lang.String datahora_cancelamento;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Integer numero_pedido;
 
-    private java.lang.String status_pedido;
+/**
+ * <p>Java class for objetoSimplificadoTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="objetoSimplificadoTO">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="datahora_cancelamento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="numero_pedido" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="status_pedido" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "objetoSimplificadoTO", propOrder = {
+    "datahoraCancelamento",
+    "numeroPedido",
+    "statusPedido"
+})
+public class ObjetoSimplificadoTO {
 
-    public ObjetoSimplificadoTO() {
-    }
-
-    public ObjetoSimplificadoTO(
-           java.lang.String datahora_cancelamento,
-           java.lang.Integer numero_pedido,
-           java.lang.String status_pedido) {
-           this.datahora_cancelamento = datahora_cancelamento;
-           this.numero_pedido = numero_pedido;
-           this.status_pedido = status_pedido;
-    }
-
+    @XmlElement(name = "datahora_cancelamento")
+    protected String datahoraCancelamento;
+    @XmlElement(name = "numero_pedido")
+    protected Integer numeroPedido;
+    @XmlElement(name = "status_pedido")
+    protected String statusPedido;
 
     /**
-     * Gets the datahora_cancelamento value for this ObjetoSimplificadoTO.
+     * Gets the value of the datahoraCancelamento property.
      * 
-     * @return datahora_cancelamento
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDatahora_cancelamento() {
-        return datahora_cancelamento;
+    public String getDatahoraCancelamento() {
+        return datahoraCancelamento;
     }
 
-
     /**
-     * Sets the datahora_cancelamento value for this ObjetoSimplificadoTO.
+     * Sets the value of the datahoraCancelamento property.
      * 
-     * @param datahora_cancelamento
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDatahora_cancelamento(java.lang.String datahora_cancelamento) {
-        this.datahora_cancelamento = datahora_cancelamento;
+    public void setDatahoraCancelamento(String value) {
+        this.datahoraCancelamento = value;
     }
 
-
     /**
-     * Gets the numero_pedido value for this ObjetoSimplificadoTO.
+     * Gets the value of the numeroPedido property.
      * 
-     * @return numero_pedido
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getNumero_pedido() {
-        return numero_pedido;
+    public Integer getNumeroPedido() {
+        return numeroPedido;
     }
 
-
     /**
-     * Sets the numero_pedido value for this ObjetoSimplificadoTO.
+     * Sets the value of the numeroPedido property.
      * 
-     * @param numero_pedido
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setNumero_pedido(java.lang.Integer numero_pedido) {
-        this.numero_pedido = numero_pedido;
+    public void setNumeroPedido(Integer value) {
+        this.numeroPedido = value;
     }
 
-
     /**
-     * Gets the status_pedido value for this ObjetoSimplificadoTO.
+     * Gets the value of the statusPedido property.
      * 
-     * @return status_pedido
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatus_pedido() {
-        return status_pedido;
+    public String getStatusPedido() {
+        return statusPedido;
     }
 
-
     /**
-     * Sets the status_pedido value for this ObjetoSimplificadoTO.
+     * Sets the value of the statusPedido property.
      * 
-     * @param status_pedido
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatus_pedido(java.lang.String status_pedido) {
-        this.status_pedido = status_pedido;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ObjetoSimplificadoTO)) return false;
-        ObjetoSimplificadoTO other = (ObjetoSimplificadoTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.datahora_cancelamento==null && other.getDatahora_cancelamento()==null) || 
-             (this.datahora_cancelamento!=null &&
-              this.datahora_cancelamento.equals(other.getDatahora_cancelamento()))) &&
-            ((this.numero_pedido==null && other.getNumero_pedido()==null) || 
-             (this.numero_pedido!=null &&
-              this.numero_pedido.equals(other.getNumero_pedido()))) &&
-            ((this.status_pedido==null && other.getStatus_pedido()==null) || 
-             (this.status_pedido!=null &&
-              this.status_pedido.equals(other.getStatus_pedido())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDatahora_cancelamento() != null) {
-            _hashCode += getDatahora_cancelamento().hashCode();
-        }
-        if (getNumero_pedido() != null) {
-            _hashCode += getNumero_pedido().hashCode();
-        }
-        if (getStatus_pedido() != null) {
-            _hashCode += getStatus_pedido().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ObjetoSimplificadoTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoSimplificadoTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datahora_cancelamento");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datahora_cancelamento"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numero_pedido");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "numero_pedido"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("status_pedido");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "status_pedido"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStatusPedido(String value) {
+        this.statusPedido = value;
     }
 
 }

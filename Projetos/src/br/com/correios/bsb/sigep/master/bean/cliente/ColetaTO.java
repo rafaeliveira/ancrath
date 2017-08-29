@@ -1,359 +1,238 @@
-/**
- * ColetaTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ColetaTO  implements java.io.Serializable {
-    private java.lang.String cklist;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String descricao;
 
-    private java.lang.String id_cliente;
+/**
+ * <p>Java class for coletaTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="coletaTO">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="cklist" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="descricao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="id_cliente" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="produto" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}produtoTO" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="remetente" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}remetenteTO" minOccurs="0"/>
+ *         &lt;element name="tipo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="valor_declarado" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "coletaTO", propOrder = {
+    "cklist",
+    "descricao",
+    "idCliente",
+    "produto",
+    "remetente",
+    "tipo",
+    "valorDeclarado"
+})
+@XmlSeeAlso({
+    ColetaSimultaneaTO.class,
+    ColetaReversaTO.class
+})
+public class ColetaTO {
 
-    private br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] produto;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO remetente;
-
-    private java.lang.String tipo;
-
-    private java.lang.String valor_declarado;
-
-    public ColetaTO() {
-    }
-
-    public ColetaTO(
-           java.lang.String cklist,
-           java.lang.String descricao,
-           java.lang.String id_cliente,
-           br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] produto,
-           br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO remetente,
-           java.lang.String tipo,
-           java.lang.String valor_declarado) {
-           this.cklist = cklist;
-           this.descricao = descricao;
-           this.id_cliente = id_cliente;
-           this.produto = produto;
-           this.remetente = remetente;
-           this.tipo = tipo;
-           this.valor_declarado = valor_declarado;
-    }
-
+    protected String cklist;
+    protected String descricao;
+    @XmlElement(name = "id_cliente")
+    protected String idCliente;
+    @XmlElement(nillable = true)
+    protected List<ProdutoTO> produto;
+    protected RemetenteTO remetente;
+    protected String tipo;
+    @XmlElement(name = "valor_declarado")
+    protected String valorDeclarado;
 
     /**
-     * Gets the cklist value for this ColetaTO.
+     * Gets the value of the cklist property.
      * 
-     * @return cklist
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCklist() {
+    public String getCklist() {
         return cklist;
     }
 
-
     /**
-     * Sets the cklist value for this ColetaTO.
+     * Sets the value of the cklist property.
      * 
-     * @param cklist
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCklist(java.lang.String cklist) {
-        this.cklist = cklist;
+    public void setCklist(String value) {
+        this.cklist = value;
     }
 
-
     /**
-     * Gets the descricao value for this ColetaTO.
+     * Gets the value of the descricao property.
      * 
-     * @return descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
+    /**
+     * Sets the value of the descricao property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescricao(String value) {
+        this.descricao = value;
+    }
 
     /**
-     * Sets the descricao value for this ColetaTO.
+     * Gets the value of the idCliente property.
      * 
-     * @param descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setDescricao(java.lang.String descricao) {
-        this.descricao = descricao;
+    public String getIdCliente() {
+        return idCliente;
     }
-
 
     /**
-     * Gets the id_cliente value for this ColetaTO.
+     * Sets the value of the idCliente property.
      * 
-     * @return id_cliente
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId_cliente() {
-        return id_cliente;
+    public void setIdCliente(String value) {
+        this.idCliente = value;
     }
-
 
     /**
-     * Sets the id_cliente value for this ColetaTO.
+     * Gets the value of the produto property.
      * 
-     * @param id_cliente
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the produto property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getProduto().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProdutoTO }
+     * 
+     * 
      */
-    public void setId_cliente(java.lang.String id_cliente) {
-        this.id_cliente = id_cliente;
+    public List<ProdutoTO> getProduto() {
+        if (produto == null) {
+            produto = new ArrayList<ProdutoTO>();
+        }
+        return this.produto;
     }
-
 
     /**
-     * Gets the produto value for this ColetaTO.
+     * Gets the value of the remetente property.
      * 
-     * @return produto
+     * @return
+     *     possible object is
+     *     {@link RemetenteTO }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] getProduto() {
-        return produto;
-    }
-
-
-    /**
-     * Sets the produto value for this ColetaTO.
-     * 
-     * @param produto
-     */
-    public void setProduto(br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] produto) {
-        this.produto = produto;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO getProduto(int i) {
-        return this.produto[i];
-    }
-
-    public void setProduto(int i, br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO _value) {
-        this.produto[i] = _value;
-    }
-
-
-    /**
-     * Gets the remetente value for this ColetaTO.
-     * 
-     * @return remetente
-     */
-    public br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO getRemetente() {
+    public RemetenteTO getRemetente() {
         return remetente;
     }
 
-
     /**
-     * Sets the remetente value for this ColetaTO.
+     * Sets the value of the remetente property.
      * 
-     * @param remetente
+     * @param value
+     *     allowed object is
+     *     {@link RemetenteTO }
+     *     
      */
-    public void setRemetente(br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO remetente) {
-        this.remetente = remetente;
+    public void setRemetente(RemetenteTO value) {
+        this.remetente = value;
     }
 
-
     /**
-     * Gets the tipo value for this ColetaTO.
+     * Gets the value of the tipo property.
      * 
-     * @return tipo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-
     /**
-     * Sets the tipo value for this ColetaTO.
+     * Sets the value of the tipo property.
      * 
-     * @param tipo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo(java.lang.String tipo) {
-        this.tipo = tipo;
+    public void setTipo(String value) {
+        this.tipo = value;
     }
 
-
     /**
-     * Gets the valor_declarado value for this ColetaTO.
+     * Gets the value of the valorDeclarado property.
      * 
-     * @return valor_declarado
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValor_declarado() {
-        return valor_declarado;
+    public String getValorDeclarado() {
+        return valorDeclarado;
     }
 
-
     /**
-     * Sets the valor_declarado value for this ColetaTO.
+     * Sets the value of the valorDeclarado property.
      * 
-     * @param valor_declarado
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValor_declarado(java.lang.String valor_declarado) {
-        this.valor_declarado = valor_declarado;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ColetaTO)) return false;
-        ColetaTO other = (ColetaTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.cklist==null && other.getCklist()==null) || 
-             (this.cklist!=null &&
-              this.cklist.equals(other.getCklist()))) &&
-            ((this.descricao==null && other.getDescricao()==null) || 
-             (this.descricao!=null &&
-              this.descricao.equals(other.getDescricao()))) &&
-            ((this.id_cliente==null && other.getId_cliente()==null) || 
-             (this.id_cliente!=null &&
-              this.id_cliente.equals(other.getId_cliente()))) &&
-            ((this.produto==null && other.getProduto()==null) || 
-             (this.produto!=null &&
-              java.util.Arrays.equals(this.produto, other.getProduto()))) &&
-            ((this.remetente==null && other.getRemetente()==null) || 
-             (this.remetente!=null &&
-              this.remetente.equals(other.getRemetente()))) &&
-            ((this.tipo==null && other.getTipo()==null) || 
-             (this.tipo!=null &&
-              this.tipo.equals(other.getTipo()))) &&
-            ((this.valor_declarado==null && other.getValor_declarado()==null) || 
-             (this.valor_declarado!=null &&
-              this.valor_declarado.equals(other.getValor_declarado())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCklist() != null) {
-            _hashCode += getCklist().hashCode();
-        }
-        if (getDescricao() != null) {
-            _hashCode += getDescricao().hashCode();
-        }
-        if (getId_cliente() != null) {
-            _hashCode += getId_cliente().hashCode();
-        }
-        if (getProduto() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getProduto());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getProduto(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRemetente() != null) {
-            _hashCode += getRemetente().hashCode();
-        }
-        if (getTipo() != null) {
-            _hashCode += getTipo().hashCode();
-        }
-        if (getValor_declarado() != null) {
-            _hashCode += getValor_declarado().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ColetaTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "coletaTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cklist");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cklist"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id_cliente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id_cliente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("produto");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "produto"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "produtoTO"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("remetente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "remetente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "remetenteTO"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("valor_declarado");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "valor_declarado"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValorDeclarado(String value) {
+        this.valorDeclarado = value;
     }
 
 }

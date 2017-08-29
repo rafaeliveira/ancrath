@@ -1,172 +1,89 @@
-/**
- * ColetaSimultaneaTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ColetaSimultaneaTO  extends br.com.correios.bsb.sigep.master.bean.cliente.ColetaTO  implements java.io.Serializable {
-    private java.lang.String obj;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String obs;
 
-    public ColetaSimultaneaTO() {
-    }
+/**
+ * <p>Java class for coletaSimultaneaTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="coletaSimultaneaTO">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://cliente.bean.master.sigep.bsb.correios.com.br/}coletaTO">
+ *       &lt;sequence>
+ *         &lt;element name="obj" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="obs" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "coletaSimultaneaTO", propOrder = {
+    "obj",
+    "obs"
+})
+public class ColetaSimultaneaTO
+    extends ColetaTO
+{
 
-    public ColetaSimultaneaTO(
-           java.lang.String cklist,
-           java.lang.String descricao,
-           java.lang.String id_cliente,
-           br.com.correios.bsb.sigep.master.bean.cliente.ProdutoTO[] produto,
-           br.com.correios.bsb.sigep.master.bean.cliente.RemetenteTO remetente,
-           java.lang.String tipo,
-           java.lang.String valor_declarado,
-           java.lang.String obj,
-           java.lang.String obs) {
-        super(
-            cklist,
-            descricao,
-            id_cliente,
-            produto,
-            remetente,
-            tipo,
-            valor_declarado);
-        this.obj = obj;
-        this.obs = obs;
-    }
-
+    protected String obj;
+    protected String obs;
 
     /**
-     * Gets the obj value for this ColetaSimultaneaTO.
+     * Gets the value of the obj property.
      * 
-     * @return obj
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getObj() {
+    public String getObj() {
         return obj;
     }
 
-
     /**
-     * Sets the obj value for this ColetaSimultaneaTO.
+     * Sets the value of the obj property.
      * 
-     * @param obj
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setObj(java.lang.String obj) {
-        this.obj = obj;
+    public void setObj(String value) {
+        this.obj = value;
     }
 
-
     /**
-     * Gets the obs value for this ColetaSimultaneaTO.
+     * Gets the value of the obs property.
      * 
-     * @return obs
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getObs() {
+    public String getObs() {
         return obs;
     }
 
-
     /**
-     * Sets the obs value for this ColetaSimultaneaTO.
+     * Sets the value of the obs property.
      * 
-     * @param obs
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setObs(java.lang.String obs) {
-        this.obs = obs;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ColetaSimultaneaTO)) return false;
-        ColetaSimultaneaTO other = (ColetaSimultaneaTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.obj==null && other.getObj()==null) || 
-             (this.obj!=null &&
-              this.obj.equals(other.getObj()))) &&
-            ((this.obs==null && other.getObs()==null) || 
-             (this.obs!=null &&
-              this.obs.equals(other.getObs())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getObj() != null) {
-            _hashCode += getObj().hashCode();
-        }
-        if (getObs() != null) {
-            _hashCode += getObs().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ColetaSimultaneaTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "coletaSimultaneaTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("obj");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "obj"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("obs");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "obs"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setObs(String value) {
+        this.obs = value;
     }
 
 }

@@ -1,217 +1,116 @@
-/**
- * Remetente.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class Remetente  extends br.com.correios.bsb.sigep.master.bean.cliente.Pessoa  implements java.io.Serializable {
-    private java.lang.String email;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String empresa;
 
-    private java.lang.String fax;
+/**
+ * <p>Java class for remetente complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="remetente">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://cliente.bean.master.sigep.bsb.correios.com.br/}pessoa">
+ *       &lt;sequence>
+ *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="empresa" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "remetente", propOrder = {
+    "email",
+    "empresa",
+    "fax"
+})
+public class Remetente
+    extends Pessoa
+{
 
-    public Remetente() {
-    }
-
-    public Remetente(
-           java.lang.String bairro,
-           java.lang.String cep,
-           java.lang.String cidade,
-           java.lang.String complemento,
-           java.lang.String ddd,
-           java.lang.String endereco,
-           java.lang.String nome,
-           java.lang.String numero,
-           java.lang.String pais,
-           java.lang.String telefone,
-           java.lang.String uf,
-           java.lang.String email,
-           java.lang.String empresa,
-           java.lang.String fax) {
-        super(
-            bairro,
-            cep,
-            cidade,
-            complemento,
-            ddd,
-            endereco,
-            nome,
-            numero,
-            pais,
-            telefone,
-            uf);
-        this.email = email;
-        this.empresa = empresa;
-        this.fax = fax;
-    }
-
+    protected String email;
+    protected String empresa;
+    protected String fax;
 
     /**
-     * Gets the email value for this Remetente.
+     * Gets the value of the email property.
      * 
-     * @return email
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-
     /**
-     * Sets the email value for this Remetente.
+     * Sets the value of the email property.
      * 
-     * @param email
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmail(java.lang.String email) {
-        this.email = email;
+    public void setEmail(String value) {
+        this.email = value;
     }
 
-
     /**
-     * Gets the empresa value for this Remetente.
+     * Gets the value of the empresa property.
      * 
-     * @return empresa
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmpresa() {
+    public String getEmpresa() {
         return empresa;
     }
 
-
     /**
-     * Sets the empresa value for this Remetente.
+     * Sets the value of the empresa property.
      * 
-     * @param empresa
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmpresa(java.lang.String empresa) {
-        this.empresa = empresa;
+    public void setEmpresa(String value) {
+        this.empresa = value;
     }
 
-
     /**
-     * Gets the fax value for this Remetente.
+     * Gets the value of the fax property.
      * 
-     * @return fax
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFax() {
+    public String getFax() {
         return fax;
     }
 
-
     /**
-     * Sets the fax value for this Remetente.
+     * Sets the value of the fax property.
      * 
-     * @param fax
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFax(java.lang.String fax) {
-        this.fax = fax;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Remetente)) return false;
-        Remetente other = (Remetente) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.email==null && other.getEmail()==null) || 
-             (this.email!=null &&
-              this.email.equals(other.getEmail()))) &&
-            ((this.empresa==null && other.getEmpresa()==null) || 
-             (this.empresa!=null &&
-              this.empresa.equals(other.getEmpresa()))) &&
-            ((this.fax==null && other.getFax()==null) || 
-             (this.fax!=null &&
-              this.fax.equals(other.getFax())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getEmail() != null) {
-            _hashCode += getEmail().hashCode();
-        }
-        if (getEmpresa() != null) {
-            _hashCode += getEmpresa().hashCode();
-        }
-        if (getFax() != null) {
-            _hashCode += getFax().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Remetente.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "remetente"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("email");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "email"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("empresa");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "empresa"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fax");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fax"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setFax(String value) {
+        this.fax = value;
     }
 
 }

@@ -1,763 +1,518 @@
-/**
- * CartaoPostagemERP.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class CartaoPostagemERP  implements java.io.Serializable {
-    private java.lang.String codigoAdministrativo;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP[] contratos;
 
-    private java.util.Calendar dataAtualizacao;
+/**
+ * <p>Java class for cartaoPostagemERP complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="cartaoPostagemERP">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigoAdministrativo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="contratos" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}contratoERP" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaFim" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataVigenciaInicio" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="datajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="datajVigenciaFim" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="datajVigenciaInicio" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="descricaoStatusCartao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="descricaoUnidadePostagemGenerica" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="horajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="servicos" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}servicoERP" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="statusCartaoPostagem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="statusCodigo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="unidadeGenerica" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="unidadesPostagem" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}unidadePostagemERP" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "cartaoPostagemERP", propOrder = {
+    "codigoAdministrativo",
+    "contratos",
+    "dataAtualizacao",
+    "dataVigenciaFim",
+    "dataVigenciaInicio",
+    "datajAtualizacao",
+    "datajVigenciaFim",
+    "datajVigenciaInicio",
+    "descricaoStatusCartao",
+    "descricaoUnidadePostagemGenerica",
+    "horajAtualizacao",
+    "numero",
+    "servicos",
+    "statusCartaoPostagem",
+    "statusCodigo",
+    "unidadeGenerica",
+    "unidadesPostagem"
+})
+public class CartaoPostagemERP {
 
-    private java.util.Calendar dataVigenciaFim;
-
-    private java.util.Calendar dataVigenciaInicio;
-
-    private java.lang.Integer datajAtualizacao;
-
-    private java.lang.Integer datajVigenciaFim;
-
-    private java.lang.Integer datajVigenciaInicio;
-
-    private java.lang.String descricaoStatusCartao;
-
-    private java.lang.String descricaoUnidadePostagemGenerica;
-
-    private java.lang.Integer horajAtualizacao;
-
-    private java.lang.String numero;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP[] servicos;
-
-    private java.lang.String statusCartaoPostagem;
-
-    private java.lang.String statusCodigo;
-
-    private java.lang.String unidadeGenerica;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP[] unidadesPostagem;
-
-    public CartaoPostagemERP() {
-    }
-
-    public CartaoPostagemERP(
-           java.lang.String codigoAdministrativo,
-           br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP[] contratos,
-           java.util.Calendar dataAtualizacao,
-           java.util.Calendar dataVigenciaFim,
-           java.util.Calendar dataVigenciaInicio,
-           java.lang.Integer datajAtualizacao,
-           java.lang.Integer datajVigenciaFim,
-           java.lang.Integer datajVigenciaInicio,
-           java.lang.String descricaoStatusCartao,
-           java.lang.String descricaoUnidadePostagemGenerica,
-           java.lang.Integer horajAtualizacao,
-           java.lang.String numero,
-           br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP[] servicos,
-           java.lang.String statusCartaoPostagem,
-           java.lang.String statusCodigo,
-           java.lang.String unidadeGenerica,
-           br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP[] unidadesPostagem) {
-           this.codigoAdministrativo = codigoAdministrativo;
-           this.contratos = contratos;
-           this.dataAtualizacao = dataAtualizacao;
-           this.dataVigenciaFim = dataVigenciaFim;
-           this.dataVigenciaInicio = dataVigenciaInicio;
-           this.datajAtualizacao = datajAtualizacao;
-           this.datajVigenciaFim = datajVigenciaFim;
-           this.datajVigenciaInicio = datajVigenciaInicio;
-           this.descricaoStatusCartao = descricaoStatusCartao;
-           this.descricaoUnidadePostagemGenerica = descricaoUnidadePostagemGenerica;
-           this.horajAtualizacao = horajAtualizacao;
-           this.numero = numero;
-           this.servicos = servicos;
-           this.statusCartaoPostagem = statusCartaoPostagem;
-           this.statusCodigo = statusCodigo;
-           this.unidadeGenerica = unidadeGenerica;
-           this.unidadesPostagem = unidadesPostagem;
-    }
-
+    protected String codigoAdministrativo;
+    @XmlElement(nillable = true)
+    protected List<ContratoERP> contratos;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataAtualizacao;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataVigenciaFim;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataVigenciaInicio;
+    protected Integer datajAtualizacao;
+    protected Integer datajVigenciaFim;
+    protected Integer datajVigenciaInicio;
+    protected String descricaoStatusCartao;
+    protected String descricaoUnidadePostagemGenerica;
+    protected Integer horajAtualizacao;
+    protected String numero;
+    @XmlElement(nillable = true)
+    protected List<ServicoERP> servicos;
+    protected String statusCartaoPostagem;
+    protected String statusCodigo;
+    protected String unidadeGenerica;
+    @XmlElement(nillable = true)
+    protected List<UnidadePostagemERP> unidadesPostagem;
 
     /**
-     * Gets the codigoAdministrativo value for this CartaoPostagemERP.
+     * Gets the value of the codigoAdministrativo property.
      * 
-     * @return codigoAdministrativo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoAdministrativo() {
+    public String getCodigoAdministrativo() {
         return codigoAdministrativo;
     }
 
+    /**
+     * Sets the value of the codigoAdministrativo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCodigoAdministrativo(String value) {
+        this.codigoAdministrativo = value;
+    }
 
     /**
-     * Sets the codigoAdministrativo value for this CartaoPostagemERP.
+     * Gets the value of the contratos property.
      * 
-     * @param codigoAdministrativo
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the contratos property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getContratos().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ContratoERP }
+     * 
+     * 
      */
-    public void setCodigoAdministrativo(java.lang.String codigoAdministrativo) {
-        this.codigoAdministrativo = codigoAdministrativo;
+    public List<ContratoERP> getContratos() {
+        if (contratos == null) {
+            contratos = new ArrayList<ContratoERP>();
+        }
+        return this.contratos;
     }
-
 
     /**
-     * Gets the contratos value for this CartaoPostagemERP.
+     * Gets the value of the dataAtualizacao property.
      * 
-     * @return contratos
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP[] getContratos() {
-        return contratos;
-    }
-
-
-    /**
-     * Sets the contratos value for this CartaoPostagemERP.
-     * 
-     * @param contratos
-     */
-    public void setContratos(br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP[] contratos) {
-        this.contratos = contratos;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP getContratos(int i) {
-        return this.contratos[i];
-    }
-
-    public void setContratos(int i, br.com.correios.bsb.sigep.master.bean.cliente.ContratoERP _value) {
-        this.contratos[i] = _value;
-    }
-
-
-    /**
-     * Gets the dataAtualizacao value for this CartaoPostagemERP.
-     * 
-     * @return dataAtualizacao
-     */
-    public java.util.Calendar getDataAtualizacao() {
+    public XMLGregorianCalendar getDataAtualizacao() {
         return dataAtualizacao;
     }
 
-
     /**
-     * Sets the dataAtualizacao value for this CartaoPostagemERP.
+     * Sets the value of the dataAtualizacao property.
      * 
-     * @param dataAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataAtualizacao(java.util.Calendar dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
+    public void setDataAtualizacao(XMLGregorianCalendar value) {
+        this.dataAtualizacao = value;
     }
 
-
     /**
-     * Gets the dataVigenciaFim value for this CartaoPostagemERP.
+     * Gets the value of the dataVigenciaFim property.
      * 
-     * @return dataVigenciaFim
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataVigenciaFim() {
+    public XMLGregorianCalendar getDataVigenciaFim() {
         return dataVigenciaFim;
     }
 
-
     /**
-     * Sets the dataVigenciaFim value for this CartaoPostagemERP.
+     * Sets the value of the dataVigenciaFim property.
      * 
-     * @param dataVigenciaFim
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataVigenciaFim(java.util.Calendar dataVigenciaFim) {
-        this.dataVigenciaFim = dataVigenciaFim;
+    public void setDataVigenciaFim(XMLGregorianCalendar value) {
+        this.dataVigenciaFim = value;
     }
 
-
     /**
-     * Gets the dataVigenciaInicio value for this CartaoPostagemERP.
+     * Gets the value of the dataVigenciaInicio property.
      * 
-     * @return dataVigenciaInicio
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataVigenciaInicio() {
+    public XMLGregorianCalendar getDataVigenciaInicio() {
         return dataVigenciaInicio;
     }
 
-
     /**
-     * Sets the dataVigenciaInicio value for this CartaoPostagemERP.
+     * Sets the value of the dataVigenciaInicio property.
      * 
-     * @param dataVigenciaInicio
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataVigenciaInicio(java.util.Calendar dataVigenciaInicio) {
-        this.dataVigenciaInicio = dataVigenciaInicio;
+    public void setDataVigenciaInicio(XMLGregorianCalendar value) {
+        this.dataVigenciaInicio = value;
     }
 
-
     /**
-     * Gets the datajAtualizacao value for this CartaoPostagemERP.
+     * Gets the value of the datajAtualizacao property.
      * 
-     * @return datajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajAtualizacao() {
+    public Integer getDatajAtualizacao() {
         return datajAtualizacao;
     }
 
-
     /**
-     * Sets the datajAtualizacao value for this CartaoPostagemERP.
+     * Sets the value of the datajAtualizacao property.
      * 
-     * @param datajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajAtualizacao(java.lang.Integer datajAtualizacao) {
-        this.datajAtualizacao = datajAtualizacao;
+    public void setDatajAtualizacao(Integer value) {
+        this.datajAtualizacao = value;
     }
 
-
     /**
-     * Gets the datajVigenciaFim value for this CartaoPostagemERP.
+     * Gets the value of the datajVigenciaFim property.
      * 
-     * @return datajVigenciaFim
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajVigenciaFim() {
+    public Integer getDatajVigenciaFim() {
         return datajVigenciaFim;
     }
 
-
     /**
-     * Sets the datajVigenciaFim value for this CartaoPostagemERP.
+     * Sets the value of the datajVigenciaFim property.
      * 
-     * @param datajVigenciaFim
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajVigenciaFim(java.lang.Integer datajVigenciaFim) {
-        this.datajVigenciaFim = datajVigenciaFim;
+    public void setDatajVigenciaFim(Integer value) {
+        this.datajVigenciaFim = value;
     }
 
-
     /**
-     * Gets the datajVigenciaInicio value for this CartaoPostagemERP.
+     * Gets the value of the datajVigenciaInicio property.
      * 
-     * @return datajVigenciaInicio
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajVigenciaInicio() {
+    public Integer getDatajVigenciaInicio() {
         return datajVigenciaInicio;
     }
 
-
     /**
-     * Sets the datajVigenciaInicio value for this CartaoPostagemERP.
+     * Sets the value of the datajVigenciaInicio property.
      * 
-     * @param datajVigenciaInicio
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajVigenciaInicio(java.lang.Integer datajVigenciaInicio) {
-        this.datajVigenciaInicio = datajVigenciaInicio;
+    public void setDatajVigenciaInicio(Integer value) {
+        this.datajVigenciaInicio = value;
     }
 
-
     /**
-     * Gets the descricaoStatusCartao value for this CartaoPostagemERP.
+     * Gets the value of the descricaoStatusCartao property.
      * 
-     * @return descricaoStatusCartao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricaoStatusCartao() {
+    public String getDescricaoStatusCartao() {
         return descricaoStatusCartao;
     }
 
-
     /**
-     * Sets the descricaoStatusCartao value for this CartaoPostagemERP.
+     * Sets the value of the descricaoStatusCartao property.
      * 
-     * @param descricaoStatusCartao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricaoStatusCartao(java.lang.String descricaoStatusCartao) {
-        this.descricaoStatusCartao = descricaoStatusCartao;
+    public void setDescricaoStatusCartao(String value) {
+        this.descricaoStatusCartao = value;
     }
 
-
     /**
-     * Gets the descricaoUnidadePostagemGenerica value for this CartaoPostagemERP.
+     * Gets the value of the descricaoUnidadePostagemGenerica property.
      * 
-     * @return descricaoUnidadePostagemGenerica
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricaoUnidadePostagemGenerica() {
+    public String getDescricaoUnidadePostagemGenerica() {
         return descricaoUnidadePostagemGenerica;
     }
 
-
     /**
-     * Sets the descricaoUnidadePostagemGenerica value for this CartaoPostagemERP.
+     * Sets the value of the descricaoUnidadePostagemGenerica property.
      * 
-     * @param descricaoUnidadePostagemGenerica
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricaoUnidadePostagemGenerica(java.lang.String descricaoUnidadePostagemGenerica) {
-        this.descricaoUnidadePostagemGenerica = descricaoUnidadePostagemGenerica;
+    public void setDescricaoUnidadePostagemGenerica(String value) {
+        this.descricaoUnidadePostagemGenerica = value;
     }
 
-
     /**
-     * Gets the horajAtualizacao value for this CartaoPostagemERP.
+     * Gets the value of the horajAtualizacao property.
      * 
-     * @return horajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getHorajAtualizacao() {
+    public Integer getHorajAtualizacao() {
         return horajAtualizacao;
     }
 
-
     /**
-     * Sets the horajAtualizacao value for this CartaoPostagemERP.
+     * Sets the value of the horajAtualizacao property.
      * 
-     * @param horajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setHorajAtualizacao(java.lang.Integer horajAtualizacao) {
-        this.horajAtualizacao = horajAtualizacao;
+    public void setHorajAtualizacao(Integer value) {
+        this.horajAtualizacao = value;
     }
 
-
     /**
-     * Gets the numero value for this CartaoPostagemERP.
+     * Gets the value of the numero property.
      * 
-     * @return numero
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNumero() {
+    public String getNumero() {
         return numero;
     }
 
+    /**
+     * Sets the value of the numero property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNumero(String value) {
+        this.numero = value;
+    }
 
     /**
-     * Sets the numero value for this CartaoPostagemERP.
+     * Gets the value of the servicos property.
      * 
-     * @param numero
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the servicos property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getServicos().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ServicoERP }
+     * 
+     * 
      */
-    public void setNumero(java.lang.String numero) {
-        this.numero = numero;
+    public List<ServicoERP> getServicos() {
+        if (servicos == null) {
+            servicos = new ArrayList<ServicoERP>();
+        }
+        return this.servicos;
     }
-
 
     /**
-     * Gets the servicos value for this CartaoPostagemERP.
+     * Gets the value of the statusCartaoPostagem property.
      * 
-     * @return servicos
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP[] getServicos() {
-        return servicos;
-    }
-
-
-    /**
-     * Sets the servicos value for this CartaoPostagemERP.
-     * 
-     * @param servicos
-     */
-    public void setServicos(br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP[] servicos) {
-        this.servicos = servicos;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP getServicos(int i) {
-        return this.servicos[i];
-    }
-
-    public void setServicos(int i, br.com.correios.bsb.sigep.master.bean.cliente.ServicoERP _value) {
-        this.servicos[i] = _value;
-    }
-
-
-    /**
-     * Gets the statusCartaoPostagem value for this CartaoPostagemERP.
-     * 
-     * @return statusCartaoPostagem
-     */
-    public java.lang.String getStatusCartaoPostagem() {
+    public String getStatusCartaoPostagem() {
         return statusCartaoPostagem;
     }
 
-
     /**
-     * Sets the statusCartaoPostagem value for this CartaoPostagemERP.
+     * Sets the value of the statusCartaoPostagem property.
      * 
-     * @param statusCartaoPostagem
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatusCartaoPostagem(java.lang.String statusCartaoPostagem) {
-        this.statusCartaoPostagem = statusCartaoPostagem;
+    public void setStatusCartaoPostagem(String value) {
+        this.statusCartaoPostagem = value;
     }
 
-
     /**
-     * Gets the statusCodigo value for this CartaoPostagemERP.
+     * Gets the value of the statusCodigo property.
      * 
-     * @return statusCodigo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatusCodigo() {
+    public String getStatusCodigo() {
         return statusCodigo;
     }
 
-
     /**
-     * Sets the statusCodigo value for this CartaoPostagemERP.
+     * Sets the value of the statusCodigo property.
      * 
-     * @param statusCodigo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatusCodigo(java.lang.String statusCodigo) {
-        this.statusCodigo = statusCodigo;
+    public void setStatusCodigo(String value) {
+        this.statusCodigo = value;
     }
 
-
     /**
-     * Gets the unidadeGenerica value for this CartaoPostagemERP.
+     * Gets the value of the unidadeGenerica property.
      * 
-     * @return unidadeGenerica
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUnidadeGenerica() {
+    public String getUnidadeGenerica() {
         return unidadeGenerica;
     }
 
-
     /**
-     * Sets the unidadeGenerica value for this CartaoPostagemERP.
+     * Sets the value of the unidadeGenerica property.
      * 
-     * @param unidadeGenerica
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUnidadeGenerica(java.lang.String unidadeGenerica) {
-        this.unidadeGenerica = unidadeGenerica;
+    public void setUnidadeGenerica(String value) {
+        this.unidadeGenerica = value;
     }
 
-
     /**
-     * Gets the unidadesPostagem value for this CartaoPostagemERP.
+     * Gets the value of the unidadesPostagem property.
      * 
-     * @return unidadesPostagem
-     */
-    public br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP[] getUnidadesPostagem() {
-        return unidadesPostagem;
-    }
-
-
-    /**
-     * Sets the unidadesPostagem value for this CartaoPostagemERP.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the unidadesPostagem property.
      * 
-     * @param unidadesPostagem
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getUnidadesPostagem().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link UnidadePostagemERP }
+     * 
+     * 
      */
-    public void setUnidadesPostagem(br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP[] unidadesPostagem) {
-        this.unidadesPostagem = unidadesPostagem;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP getUnidadesPostagem(int i) {
-        return this.unidadesPostagem[i];
-    }
-
-    public void setUnidadesPostagem(int i, br.com.correios.bsb.sigep.master.bean.cliente.UnidadePostagemERP _value) {
-        this.unidadesPostagem[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CartaoPostagemERP)) return false;
-        CartaoPostagemERP other = (CartaoPostagemERP) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<UnidadePostagemERP> getUnidadesPostagem() {
+        if (unidadesPostagem == null) {
+            unidadesPostagem = new ArrayList<UnidadePostagemERP>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigoAdministrativo==null && other.getCodigoAdministrativo()==null) || 
-             (this.codigoAdministrativo!=null &&
-              this.codigoAdministrativo.equals(other.getCodigoAdministrativo()))) &&
-            ((this.contratos==null && other.getContratos()==null) || 
-             (this.contratos!=null &&
-              java.util.Arrays.equals(this.contratos, other.getContratos()))) &&
-            ((this.dataAtualizacao==null && other.getDataAtualizacao()==null) || 
-             (this.dataAtualizacao!=null &&
-              this.dataAtualizacao.equals(other.getDataAtualizacao()))) &&
-            ((this.dataVigenciaFim==null && other.getDataVigenciaFim()==null) || 
-             (this.dataVigenciaFim!=null &&
-              this.dataVigenciaFim.equals(other.getDataVigenciaFim()))) &&
-            ((this.dataVigenciaInicio==null && other.getDataVigenciaInicio()==null) || 
-             (this.dataVigenciaInicio!=null &&
-              this.dataVigenciaInicio.equals(other.getDataVigenciaInicio()))) &&
-            ((this.datajAtualizacao==null && other.getDatajAtualizacao()==null) || 
-             (this.datajAtualizacao!=null &&
-              this.datajAtualizacao.equals(other.getDatajAtualizacao()))) &&
-            ((this.datajVigenciaFim==null && other.getDatajVigenciaFim()==null) || 
-             (this.datajVigenciaFim!=null &&
-              this.datajVigenciaFim.equals(other.getDatajVigenciaFim()))) &&
-            ((this.datajVigenciaInicio==null && other.getDatajVigenciaInicio()==null) || 
-             (this.datajVigenciaInicio!=null &&
-              this.datajVigenciaInicio.equals(other.getDatajVigenciaInicio()))) &&
-            ((this.descricaoStatusCartao==null && other.getDescricaoStatusCartao()==null) || 
-             (this.descricaoStatusCartao!=null &&
-              this.descricaoStatusCartao.equals(other.getDescricaoStatusCartao()))) &&
-            ((this.descricaoUnidadePostagemGenerica==null && other.getDescricaoUnidadePostagemGenerica()==null) || 
-             (this.descricaoUnidadePostagemGenerica!=null &&
-              this.descricaoUnidadePostagemGenerica.equals(other.getDescricaoUnidadePostagemGenerica()))) &&
-            ((this.horajAtualizacao==null && other.getHorajAtualizacao()==null) || 
-             (this.horajAtualizacao!=null &&
-              this.horajAtualizacao.equals(other.getHorajAtualizacao()))) &&
-            ((this.numero==null && other.getNumero()==null) || 
-             (this.numero!=null &&
-              this.numero.equals(other.getNumero()))) &&
-            ((this.servicos==null && other.getServicos()==null) || 
-             (this.servicos!=null &&
-              java.util.Arrays.equals(this.servicos, other.getServicos()))) &&
-            ((this.statusCartaoPostagem==null && other.getStatusCartaoPostagem()==null) || 
-             (this.statusCartaoPostagem!=null &&
-              this.statusCartaoPostagem.equals(other.getStatusCartaoPostagem()))) &&
-            ((this.statusCodigo==null && other.getStatusCodigo()==null) || 
-             (this.statusCodigo!=null &&
-              this.statusCodigo.equals(other.getStatusCodigo()))) &&
-            ((this.unidadeGenerica==null && other.getUnidadeGenerica()==null) || 
-             (this.unidadeGenerica!=null &&
-              this.unidadeGenerica.equals(other.getUnidadeGenerica()))) &&
-            ((this.unidadesPostagem==null && other.getUnidadesPostagem()==null) || 
-             (this.unidadesPostagem!=null &&
-              java.util.Arrays.equals(this.unidadesPostagem, other.getUnidadesPostagem())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigoAdministrativo() != null) {
-            _hashCode += getCodigoAdministrativo().hashCode();
-        }
-        if (getContratos() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getContratos());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getContratos(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDataAtualizacao() != null) {
-            _hashCode += getDataAtualizacao().hashCode();
-        }
-        if (getDataVigenciaFim() != null) {
-            _hashCode += getDataVigenciaFim().hashCode();
-        }
-        if (getDataVigenciaInicio() != null) {
-            _hashCode += getDataVigenciaInicio().hashCode();
-        }
-        if (getDatajAtualizacao() != null) {
-            _hashCode += getDatajAtualizacao().hashCode();
-        }
-        if (getDatajVigenciaFim() != null) {
-            _hashCode += getDatajVigenciaFim().hashCode();
-        }
-        if (getDatajVigenciaInicio() != null) {
-            _hashCode += getDatajVigenciaInicio().hashCode();
-        }
-        if (getDescricaoStatusCartao() != null) {
-            _hashCode += getDescricaoStatusCartao().hashCode();
-        }
-        if (getDescricaoUnidadePostagemGenerica() != null) {
-            _hashCode += getDescricaoUnidadePostagemGenerica().hashCode();
-        }
-        if (getHorajAtualizacao() != null) {
-            _hashCode += getHorajAtualizacao().hashCode();
-        }
-        if (getNumero() != null) {
-            _hashCode += getNumero().hashCode();
-        }
-        if (getServicos() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getServicos());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getServicos(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getStatusCartaoPostagem() != null) {
-            _hashCode += getStatusCartaoPostagem().hashCode();
-        }
-        if (getStatusCodigo() != null) {
-            _hashCode += getStatusCodigo().hashCode();
-        }
-        if (getUnidadeGenerica() != null) {
-            _hashCode += getUnidadeGenerica().hashCode();
-        }
-        if (getUnidadesPostagem() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUnidadesPostagem());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUnidadesPostagem(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CartaoPostagemERP.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "cartaoPostagemERP"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoAdministrativo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoAdministrativo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contratos");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "contratos"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "contratoERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaFim");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaFim"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataVigenciaInicio");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataVigenciaInicio"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajVigenciaFim");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajVigenciaFim"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajVigenciaInicio");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajVigenciaInicio"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricaoStatusCartao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricaoStatusCartao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricaoUnidadePostagemGenerica");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricaoUnidadePostagemGenerica"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("horajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "horajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numero");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "numero"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servicos");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servicos"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statusCartaoPostagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "statusCartaoPostagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statusCodigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "statusCodigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("unidadeGenerica");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "unidadeGenerica"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("unidadesPostagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "unidadesPostagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "unidadePostagemERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.unidadesPostagem;
     }
 
 }

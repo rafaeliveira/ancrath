@@ -7,7 +7,7 @@
  try
 {
 	 String sCep = request.getParameter("cep");
-	 br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteServiceLocator service = new br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteServiceLocator();
+	 AtendeClienteService service = new AtendeClienteService();
 	 
 	 br.com.correios.bsb.sigep.master.bean.cliente.AtendeCliente port = service.getAtendeClientePort();
 	 

@@ -1,569 +1,386 @@
-/**
- * PedidoInformacaoRegistro.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class PedidoInformacaoRegistro  extends br.com.correios.bsb.sigep.master.bean.cliente.PedidoInformacao  implements java.io.Serializable {
-    private br.com.correios.bsb.sigep.master.bean.cliente.Cliente cliente;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String codigoRegistro;
 
-    private br.com.correios.bsb.sigep.master.bean.cliente.Conta conta;
+/**
+ * <p>Java class for pedidoInformacaoRegistro complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="pedidoInformacaoRegistro">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://cliente.bean.master.sigep.bsb.correios.com.br/}pedidoInformacao">
+ *       &lt;sequence>
+ *         &lt;element name="cliente" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}cliente" minOccurs="0"/>
+ *         &lt;element name="codigoRegistro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="conta" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}conta" minOccurs="0"/>
+ *         &lt;element name="conteudoObjeto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="cpfCnpj" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="destinatario" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}destinatario" minOccurs="0"/>
+ *         &lt;element name="embalagem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="motivo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="observacao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="postagem" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}postagem" minOccurs="0"/>
+ *         &lt;element name="remetente" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}remetente" minOccurs="0"/>
+ *         &lt;element name="servico" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="tipoDocumento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "pedidoInformacaoRegistro", propOrder = {
+    "cliente",
+    "codigoRegistro",
+    "conta",
+    "conteudoObjeto",
+    "cpfCnpj",
+    "destinatario",
+    "embalagem",
+    "motivo",
+    "observacao",
+    "postagem",
+    "remetente",
+    "servico",
+    "tipoDocumento"
+})
+public class PedidoInformacaoRegistro
+    extends PedidoInformacao
+{
 
-    private java.lang.String conteudoObjeto;
-
-    private java.lang.String cpfCnpj;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.Destinatario destinatario;
-
-    private java.lang.String embalagem;
-
-    private java.lang.Integer motivo;
-
-    private java.lang.String observacao;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.Postagem postagem;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.Remetente remetente;
-
-    private java.lang.Integer servico;
-
-    private java.lang.String tipoDocumento;
-
-    public PedidoInformacaoRegistro() {
-    }
-
-    public PedidoInformacaoRegistro(
-           java.lang.Long id,
-           java.lang.String usuario,
-           br.com.correios.bsb.sigep.master.bean.cliente.Cliente cliente,
-           java.lang.String codigoRegistro,
-           br.com.correios.bsb.sigep.master.bean.cliente.Conta conta,
-           java.lang.String conteudoObjeto,
-           java.lang.String cpfCnpj,
-           br.com.correios.bsb.sigep.master.bean.cliente.Destinatario destinatario,
-           java.lang.String embalagem,
-           java.lang.Integer motivo,
-           java.lang.String observacao,
-           br.com.correios.bsb.sigep.master.bean.cliente.Postagem postagem,
-           br.com.correios.bsb.sigep.master.bean.cliente.Remetente remetente,
-           java.lang.Integer servico,
-           java.lang.String tipoDocumento) {
-        super(
-            id,
-            usuario);
-        this.cliente = cliente;
-        this.codigoRegistro = codigoRegistro;
-        this.conta = conta;
-        this.conteudoObjeto = conteudoObjeto;
-        this.cpfCnpj = cpfCnpj;
-        this.destinatario = destinatario;
-        this.embalagem = embalagem;
-        this.motivo = motivo;
-        this.observacao = observacao;
-        this.postagem = postagem;
-        this.remetente = remetente;
-        this.servico = servico;
-        this.tipoDocumento = tipoDocumento;
-    }
-
+    protected Cliente cliente;
+    protected String codigoRegistro;
+    protected Conta conta;
+    protected String conteudoObjeto;
+    protected String cpfCnpj;
+    protected Destinatario destinatario;
+    protected String embalagem;
+    protected Integer motivo;
+    protected String observacao;
+    protected Postagem postagem;
+    protected Remetente remetente;
+    protected Integer servico;
+    protected String tipoDocumento;
 
     /**
-     * Gets the cliente value for this PedidoInformacaoRegistro.
+     * Gets the value of the cliente property.
      * 
-     * @return cliente
+     * @return
+     *     possible object is
+     *     {@link Cliente }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.Cliente getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-
     /**
-     * Sets the cliente value for this PedidoInformacaoRegistro.
+     * Sets the value of the cliente property.
      * 
-     * @param cliente
+     * @param value
+     *     allowed object is
+     *     {@link Cliente }
+     *     
      */
-    public void setCliente(br.com.correios.bsb.sigep.master.bean.cliente.Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Cliente value) {
+        this.cliente = value;
     }
 
-
     /**
-     * Gets the codigoRegistro value for this PedidoInformacaoRegistro.
+     * Gets the value of the codigoRegistro property.
      * 
-     * @return codigoRegistro
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoRegistro() {
+    public String getCodigoRegistro() {
         return codigoRegistro;
     }
 
-
     /**
-     * Sets the codigoRegistro value for this PedidoInformacaoRegistro.
+     * Sets the value of the codigoRegistro property.
      * 
-     * @param codigoRegistro
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoRegistro(java.lang.String codigoRegistro) {
-        this.codigoRegistro = codigoRegistro;
+    public void setCodigoRegistro(String value) {
+        this.codigoRegistro = value;
     }
 
-
     /**
-     * Gets the conta value for this PedidoInformacaoRegistro.
+     * Gets the value of the conta property.
      * 
-     * @return conta
+     * @return
+     *     possible object is
+     *     {@link Conta }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.Conta getConta() {
+    public Conta getConta() {
         return conta;
     }
 
-
     /**
-     * Sets the conta value for this PedidoInformacaoRegistro.
+     * Sets the value of the conta property.
      * 
-     * @param conta
+     * @param value
+     *     allowed object is
+     *     {@link Conta }
+     *     
      */
-    public void setConta(br.com.correios.bsb.sigep.master.bean.cliente.Conta conta) {
-        this.conta = conta;
+    public void setConta(Conta value) {
+        this.conta = value;
     }
 
-
     /**
-     * Gets the conteudoObjeto value for this PedidoInformacaoRegistro.
+     * Gets the value of the conteudoObjeto property.
      * 
-     * @return conteudoObjeto
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getConteudoObjeto() {
+    public String getConteudoObjeto() {
         return conteudoObjeto;
     }
 
-
     /**
-     * Sets the conteudoObjeto value for this PedidoInformacaoRegistro.
+     * Sets the value of the conteudoObjeto property.
      * 
-     * @param conteudoObjeto
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConteudoObjeto(java.lang.String conteudoObjeto) {
-        this.conteudoObjeto = conteudoObjeto;
+    public void setConteudoObjeto(String value) {
+        this.conteudoObjeto = value;
     }
 
-
     /**
-     * Gets the cpfCnpj value for this PedidoInformacaoRegistro.
+     * Gets the value of the cpfCnpj property.
      * 
-     * @return cpfCnpj
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCpfCnpj() {
+    public String getCpfCnpj() {
         return cpfCnpj;
     }
 
-
     /**
-     * Sets the cpfCnpj value for this PedidoInformacaoRegistro.
+     * Sets the value of the cpfCnpj property.
      * 
-     * @param cpfCnpj
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCpfCnpj(java.lang.String cpfCnpj) {
-        this.cpfCnpj = cpfCnpj;
+    public void setCpfCnpj(String value) {
+        this.cpfCnpj = value;
     }
 
-
     /**
-     * Gets the destinatario value for this PedidoInformacaoRegistro.
+     * Gets the value of the destinatario property.
      * 
-     * @return destinatario
+     * @return
+     *     possible object is
+     *     {@link Destinatario }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.Destinatario getDestinatario() {
+    public Destinatario getDestinatario() {
         return destinatario;
     }
 
-
     /**
-     * Sets the destinatario value for this PedidoInformacaoRegistro.
+     * Sets the value of the destinatario property.
      * 
-     * @param destinatario
+     * @param value
+     *     allowed object is
+     *     {@link Destinatario }
+     *     
      */
-    public void setDestinatario(br.com.correios.bsb.sigep.master.bean.cliente.Destinatario destinatario) {
-        this.destinatario = destinatario;
+    public void setDestinatario(Destinatario value) {
+        this.destinatario = value;
     }
 
-
     /**
-     * Gets the embalagem value for this PedidoInformacaoRegistro.
+     * Gets the value of the embalagem property.
      * 
-     * @return embalagem
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmbalagem() {
+    public String getEmbalagem() {
         return embalagem;
     }
 
-
     /**
-     * Sets the embalagem value for this PedidoInformacaoRegistro.
+     * Sets the value of the embalagem property.
      * 
-     * @param embalagem
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmbalagem(java.lang.String embalagem) {
-        this.embalagem = embalagem;
+    public void setEmbalagem(String value) {
+        this.embalagem = value;
     }
 
-
     /**
-     * Gets the motivo value for this PedidoInformacaoRegistro.
+     * Gets the value of the motivo property.
      * 
-     * @return motivo
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getMotivo() {
+    public Integer getMotivo() {
         return motivo;
     }
 
-
     /**
-     * Sets the motivo value for this PedidoInformacaoRegistro.
+     * Sets the value of the motivo property.
      * 
-     * @param motivo
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setMotivo(java.lang.Integer motivo) {
-        this.motivo = motivo;
+    public void setMotivo(Integer value) {
+        this.motivo = value;
     }
 
-
     /**
-     * Gets the observacao value for this PedidoInformacaoRegistro.
+     * Gets the value of the observacao property.
      * 
-     * @return observacao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getObservacao() {
+    public String getObservacao() {
         return observacao;
     }
 
-
     /**
-     * Sets the observacao value for this PedidoInformacaoRegistro.
+     * Sets the value of the observacao property.
      * 
-     * @param observacao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setObservacao(java.lang.String observacao) {
-        this.observacao = observacao;
+    public void setObservacao(String value) {
+        this.observacao = value;
     }
 
-
     /**
-     * Gets the postagem value for this PedidoInformacaoRegistro.
+     * Gets the value of the postagem property.
      * 
-     * @return postagem
+     * @return
+     *     possible object is
+     *     {@link Postagem }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.Postagem getPostagem() {
+    public Postagem getPostagem() {
         return postagem;
     }
 
-
     /**
-     * Sets the postagem value for this PedidoInformacaoRegistro.
+     * Sets the value of the postagem property.
      * 
-     * @param postagem
+     * @param value
+     *     allowed object is
+     *     {@link Postagem }
+     *     
      */
-    public void setPostagem(br.com.correios.bsb.sigep.master.bean.cliente.Postagem postagem) {
-        this.postagem = postagem;
+    public void setPostagem(Postagem value) {
+        this.postagem = value;
     }
 
-
     /**
-     * Gets the remetente value for this PedidoInformacaoRegistro.
+     * Gets the value of the remetente property.
      * 
-     * @return remetente
+     * @return
+     *     possible object is
+     *     {@link Remetente }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.Remetente getRemetente() {
+    public Remetente getRemetente() {
         return remetente;
     }
 
-
     /**
-     * Sets the remetente value for this PedidoInformacaoRegistro.
+     * Sets the value of the remetente property.
      * 
-     * @param remetente
+     * @param value
+     *     allowed object is
+     *     {@link Remetente }
+     *     
      */
-    public void setRemetente(br.com.correios.bsb.sigep.master.bean.cliente.Remetente remetente) {
-        this.remetente = remetente;
+    public void setRemetente(Remetente value) {
+        this.remetente = value;
     }
 
-
     /**
-     * Gets the servico value for this PedidoInformacaoRegistro.
+     * Gets the value of the servico property.
      * 
-     * @return servico
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getServico() {
+    public Integer getServico() {
         return servico;
     }
 
-
     /**
-     * Sets the servico value for this PedidoInformacaoRegistro.
+     * Sets the value of the servico property.
      * 
-     * @param servico
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setServico(java.lang.Integer servico) {
-        this.servico = servico;
+    public void setServico(Integer value) {
+        this.servico = value;
     }
 
-
     /**
-     * Gets the tipoDocumento value for this PedidoInformacaoRegistro.
+     * Gets the value of the tipoDocumento property.
      * 
-     * @return tipoDocumento
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipoDocumento() {
+    public String getTipoDocumento() {
         return tipoDocumento;
     }
 
-
     /**
-     * Sets the tipoDocumento value for this PedidoInformacaoRegistro.
+     * Sets the value of the tipoDocumento property.
      * 
-     * @param tipoDocumento
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipoDocumento(java.lang.String tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PedidoInformacaoRegistro)) return false;
-        PedidoInformacaoRegistro other = (PedidoInformacaoRegistro) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.cliente==null && other.getCliente()==null) || 
-             (this.cliente!=null &&
-              this.cliente.equals(other.getCliente()))) &&
-            ((this.codigoRegistro==null && other.getCodigoRegistro()==null) || 
-             (this.codigoRegistro!=null &&
-              this.codigoRegistro.equals(other.getCodigoRegistro()))) &&
-            ((this.conta==null && other.getConta()==null) || 
-             (this.conta!=null &&
-              this.conta.equals(other.getConta()))) &&
-            ((this.conteudoObjeto==null && other.getConteudoObjeto()==null) || 
-             (this.conteudoObjeto!=null &&
-              this.conteudoObjeto.equals(other.getConteudoObjeto()))) &&
-            ((this.cpfCnpj==null && other.getCpfCnpj()==null) || 
-             (this.cpfCnpj!=null &&
-              this.cpfCnpj.equals(other.getCpfCnpj()))) &&
-            ((this.destinatario==null && other.getDestinatario()==null) || 
-             (this.destinatario!=null &&
-              this.destinatario.equals(other.getDestinatario()))) &&
-            ((this.embalagem==null && other.getEmbalagem()==null) || 
-             (this.embalagem!=null &&
-              this.embalagem.equals(other.getEmbalagem()))) &&
-            ((this.motivo==null && other.getMotivo()==null) || 
-             (this.motivo!=null &&
-              this.motivo.equals(other.getMotivo()))) &&
-            ((this.observacao==null && other.getObservacao()==null) || 
-             (this.observacao!=null &&
-              this.observacao.equals(other.getObservacao()))) &&
-            ((this.postagem==null && other.getPostagem()==null) || 
-             (this.postagem!=null &&
-              this.postagem.equals(other.getPostagem()))) &&
-            ((this.remetente==null && other.getRemetente()==null) || 
-             (this.remetente!=null &&
-              this.remetente.equals(other.getRemetente()))) &&
-            ((this.servico==null && other.getServico()==null) || 
-             (this.servico!=null &&
-              this.servico.equals(other.getServico()))) &&
-            ((this.tipoDocumento==null && other.getTipoDocumento()==null) || 
-             (this.tipoDocumento!=null &&
-              this.tipoDocumento.equals(other.getTipoDocumento())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCliente() != null) {
-            _hashCode += getCliente().hashCode();
-        }
-        if (getCodigoRegistro() != null) {
-            _hashCode += getCodigoRegistro().hashCode();
-        }
-        if (getConta() != null) {
-            _hashCode += getConta().hashCode();
-        }
-        if (getConteudoObjeto() != null) {
-            _hashCode += getConteudoObjeto().hashCode();
-        }
-        if (getCpfCnpj() != null) {
-            _hashCode += getCpfCnpj().hashCode();
-        }
-        if (getDestinatario() != null) {
-            _hashCode += getDestinatario().hashCode();
-        }
-        if (getEmbalagem() != null) {
-            _hashCode += getEmbalagem().hashCode();
-        }
-        if (getMotivo() != null) {
-            _hashCode += getMotivo().hashCode();
-        }
-        if (getObservacao() != null) {
-            _hashCode += getObservacao().hashCode();
-        }
-        if (getPostagem() != null) {
-            _hashCode += getPostagem().hashCode();
-        }
-        if (getRemetente() != null) {
-            _hashCode += getRemetente().hashCode();
-        }
-        if (getServico() != null) {
-            _hashCode += getServico().hashCode();
-        }
-        if (getTipoDocumento() != null) {
-            _hashCode += getTipoDocumento().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PedidoInformacaoRegistro.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "pedidoInformacaoRegistro"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cliente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cliente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "cliente"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoRegistro");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoRegistro"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("conta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "conta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "conta"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("conteudoObjeto");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "conteudoObjeto"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cpfCnpj");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cpfCnpj"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("destinatario");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "destinatario"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "destinatario"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("embalagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "embalagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("motivo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "motivo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("observacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "observacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "postagem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("remetente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "remetente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "remetente"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servico");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servico"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipoDocumento");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipoDocumento"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTipoDocumento(String value) {
+        this.tipoDocumento = value;
     }
 
 }

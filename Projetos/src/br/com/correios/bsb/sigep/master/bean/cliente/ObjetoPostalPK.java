@@ -1,152 +1,79 @@
-/**
- * ObjetoPostalPK.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ObjetoPostalPK  implements java.io.Serializable {
-    private java.lang.String codigoEtiqueta;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private long plpNu;
 
-    public ObjetoPostalPK() {
-    }
+/**
+ * <p>Java class for objetoPostalPK complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="objetoPostalPK">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigoEtiqueta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="plpNu" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "objetoPostalPK", propOrder = {
+    "codigoEtiqueta",
+    "plpNu"
+})
+public class ObjetoPostalPK {
 
-    public ObjetoPostalPK(
-           java.lang.String codigoEtiqueta,
-           long plpNu) {
-           this.codigoEtiqueta = codigoEtiqueta;
-           this.plpNu = plpNu;
-    }
-
+    protected String codigoEtiqueta;
+    protected long plpNu;
 
     /**
-     * Gets the codigoEtiqueta value for this ObjetoPostalPK.
+     * Gets the value of the codigoEtiqueta property.
      * 
-     * @return codigoEtiqueta
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoEtiqueta() {
+    public String getCodigoEtiqueta() {
         return codigoEtiqueta;
     }
 
-
     /**
-     * Sets the codigoEtiqueta value for this ObjetoPostalPK.
+     * Sets the value of the codigoEtiqueta property.
      * 
-     * @param codigoEtiqueta
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoEtiqueta(java.lang.String codigoEtiqueta) {
-        this.codigoEtiqueta = codigoEtiqueta;
+    public void setCodigoEtiqueta(String value) {
+        this.codigoEtiqueta = value;
     }
 
-
     /**
-     * Gets the plpNu value for this ObjetoPostalPK.
+     * Gets the value of the plpNu property.
      * 
-     * @return plpNu
      */
     public long getPlpNu() {
         return plpNu;
     }
 
-
     /**
-     * Sets the plpNu value for this ObjetoPostalPK.
+     * Sets the value of the plpNu property.
      * 
-     * @param plpNu
      */
-    public void setPlpNu(long plpNu) {
-        this.plpNu = plpNu;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ObjetoPostalPK)) return false;
-        ObjetoPostalPK other = (ObjetoPostalPK) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigoEtiqueta==null && other.getCodigoEtiqueta()==null) || 
-             (this.codigoEtiqueta!=null &&
-              this.codigoEtiqueta.equals(other.getCodigoEtiqueta()))) &&
-            this.plpNu == other.getPlpNu();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigoEtiqueta() != null) {
-            _hashCode += getCodigoEtiqueta().hashCode();
-        }
-        _hashCode += new Long(getPlpNu()).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ObjetoPostalPK.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoPostalPK"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoEtiqueta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoEtiqueta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("plpNu");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "plpNu"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setPlpNu(long value) {
+        this.plpNu = value;
     }
 
 }

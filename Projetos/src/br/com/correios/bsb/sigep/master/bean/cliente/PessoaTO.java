@@ -1,527 +1,361 @@
-/**
- * PessoaTO.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class PessoaTO  implements java.io.Serializable {
-    private java.lang.String bairro;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String cep;
 
-    private java.lang.String cidade;
+/**
+ * <p>Java class for pessoaTO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="pessoaTO">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="bairro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="cep" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="cidade" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="complemento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ddd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="logradouro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="referencia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="telefone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="uf" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "pessoaTO", propOrder = {
+    "bairro",
+    "cep",
+    "cidade",
+    "complemento",
+    "ddd",
+    "email",
+    "logradouro",
+    "nome",
+    "numero",
+    "referencia",
+    "telefone",
+    "uf"
+})
+@XmlSeeAlso({
+    RemetenteTO.class
+})
+public class PessoaTO {
 
-    private java.lang.String complemento;
-
-    private java.lang.String ddd;
-
-    private java.lang.String email;
-
-    private java.lang.String logradouro;
-
-    private java.lang.String nome;
-
-    private java.lang.String numero;
-
-    private java.lang.String referencia;
-
-    private java.lang.String telefone;
-
-    private java.lang.String uf;
-
-    public PessoaTO() {
-    }
-
-    public PessoaTO(
-           java.lang.String bairro,
-           java.lang.String cep,
-           java.lang.String cidade,
-           java.lang.String complemento,
-           java.lang.String ddd,
-           java.lang.String email,
-           java.lang.String logradouro,
-           java.lang.String nome,
-           java.lang.String numero,
-           java.lang.String referencia,
-           java.lang.String telefone,
-           java.lang.String uf) {
-           this.bairro = bairro;
-           this.cep = cep;
-           this.cidade = cidade;
-           this.complemento = complemento;
-           this.ddd = ddd;
-           this.email = email;
-           this.logradouro = logradouro;
-           this.nome = nome;
-           this.numero = numero;
-           this.referencia = referencia;
-           this.telefone = telefone;
-           this.uf = uf;
-    }
-
+    protected String bairro;
+    protected String cep;
+    protected String cidade;
+    protected String complemento;
+    protected String ddd;
+    protected String email;
+    protected String logradouro;
+    protected String nome;
+    protected String numero;
+    protected String referencia;
+    protected String telefone;
+    protected String uf;
 
     /**
-     * Gets the bairro value for this PessoaTO.
+     * Gets the value of the bairro property.
      * 
-     * @return bairro
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBairro() {
+    public String getBairro() {
         return bairro;
     }
 
-
     /**
-     * Sets the bairro value for this PessoaTO.
+     * Sets the value of the bairro property.
      * 
-     * @param bairro
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBairro(java.lang.String bairro) {
-        this.bairro = bairro;
+    public void setBairro(String value) {
+        this.bairro = value;
     }
 
-
     /**
-     * Gets the cep value for this PessoaTO.
+     * Gets the value of the cep property.
      * 
-     * @return cep
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCep() {
+    public String getCep() {
         return cep;
     }
 
-
     /**
-     * Sets the cep value for this PessoaTO.
+     * Sets the value of the cep property.
      * 
-     * @param cep
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCep(java.lang.String cep) {
-        this.cep = cep;
+    public void setCep(String value) {
+        this.cep = value;
     }
 
-
     /**
-     * Gets the cidade value for this PessoaTO.
+     * Gets the value of the cidade property.
      * 
-     * @return cidade
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCidade() {
+    public String getCidade() {
         return cidade;
     }
 
-
     /**
-     * Sets the cidade value for this PessoaTO.
+     * Sets the value of the cidade property.
      * 
-     * @param cidade
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCidade(java.lang.String cidade) {
-        this.cidade = cidade;
+    public void setCidade(String value) {
+        this.cidade = value;
     }
 
-
     /**
-     * Gets the complemento value for this PessoaTO.
+     * Gets the value of the complemento property.
      * 
-     * @return complemento
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getComplemento() {
+    public String getComplemento() {
         return complemento;
     }
 
-
     /**
-     * Sets the complemento value for this PessoaTO.
+     * Sets the value of the complemento property.
      * 
-     * @param complemento
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setComplemento(java.lang.String complemento) {
-        this.complemento = complemento;
+    public void setComplemento(String value) {
+        this.complemento = value;
     }
 
-
     /**
-     * Gets the ddd value for this PessoaTO.
+     * Gets the value of the ddd property.
      * 
-     * @return ddd
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDdd() {
+    public String getDdd() {
         return ddd;
     }
 
-
     /**
-     * Sets the ddd value for this PessoaTO.
+     * Sets the value of the ddd property.
      * 
-     * @param ddd
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDdd(java.lang.String ddd) {
-        this.ddd = ddd;
+    public void setDdd(String value) {
+        this.ddd = value;
     }
 
-
     /**
-     * Gets the email value for this PessoaTO.
+     * Gets the value of the email property.
      * 
-     * @return email
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-
     /**
-     * Sets the email value for this PessoaTO.
+     * Sets the value of the email property.
      * 
-     * @param email
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmail(java.lang.String email) {
-        this.email = email;
+    public void setEmail(String value) {
+        this.email = value;
     }
 
-
     /**
-     * Gets the logradouro value for this PessoaTO.
+     * Gets the value of the logradouro property.
      * 
-     * @return logradouro
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogradouro() {
+    public String getLogradouro() {
         return logradouro;
     }
 
-
     /**
-     * Sets the logradouro value for this PessoaTO.
+     * Sets the value of the logradouro property.
      * 
-     * @param logradouro
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogradouro(java.lang.String logradouro) {
-        this.logradouro = logradouro;
+    public void setLogradouro(String value) {
+        this.logradouro = value;
     }
 
-
     /**
-     * Gets the nome value for this PessoaTO.
+     * Gets the value of the nome property.
      * 
-     * @return nome
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNome() {
+    public String getNome() {
         return nome;
     }
 
-
     /**
-     * Sets the nome value for this PessoaTO.
+     * Sets the value of the nome property.
      * 
-     * @param nome
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNome(java.lang.String nome) {
-        this.nome = nome;
+    public void setNome(String value) {
+        this.nome = value;
     }
 
-
     /**
-     * Gets the numero value for this PessoaTO.
+     * Gets the value of the numero property.
      * 
-     * @return numero
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-
     /**
-     * Sets the numero value for this PessoaTO.
+     * Sets the value of the numero property.
      * 
-     * @param numero
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNumero(java.lang.String numero) {
-        this.numero = numero;
+    public void setNumero(String value) {
+        this.numero = value;
     }
 
-
     /**
-     * Gets the referencia value for this PessoaTO.
+     * Gets the value of the referencia property.
      * 
-     * @return referencia
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReferencia() {
+    public String getReferencia() {
         return referencia;
     }
 
-
     /**
-     * Sets the referencia value for this PessoaTO.
+     * Sets the value of the referencia property.
      * 
-     * @param referencia
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReferencia(java.lang.String referencia) {
-        this.referencia = referencia;
+    public void setReferencia(String value) {
+        this.referencia = value;
     }
 
-
     /**
-     * Gets the telefone value for this PessoaTO.
+     * Gets the value of the telefone property.
      * 
-     * @return telefone
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-
     /**
-     * Sets the telefone value for this PessoaTO.
+     * Sets the value of the telefone property.
      * 
-     * @param telefone
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTelefone(java.lang.String telefone) {
-        this.telefone = telefone;
+    public void setTelefone(String value) {
+        this.telefone = value;
     }
 
-
     /**
-     * Gets the uf value for this PessoaTO.
+     * Gets the value of the uf property.
      * 
-     * @return uf
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUf() {
+    public String getUf() {
         return uf;
     }
 
-
     /**
-     * Sets the uf value for this PessoaTO.
+     * Sets the value of the uf property.
      * 
-     * @param uf
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUf(java.lang.String uf) {
-        this.uf = uf;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PessoaTO)) return false;
-        PessoaTO other = (PessoaTO) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.bairro==null && other.getBairro()==null) || 
-             (this.bairro!=null &&
-              this.bairro.equals(other.getBairro()))) &&
-            ((this.cep==null && other.getCep()==null) || 
-             (this.cep!=null &&
-              this.cep.equals(other.getCep()))) &&
-            ((this.cidade==null && other.getCidade()==null) || 
-             (this.cidade!=null &&
-              this.cidade.equals(other.getCidade()))) &&
-            ((this.complemento==null && other.getComplemento()==null) || 
-             (this.complemento!=null &&
-              this.complemento.equals(other.getComplemento()))) &&
-            ((this.ddd==null && other.getDdd()==null) || 
-             (this.ddd!=null &&
-              this.ddd.equals(other.getDdd()))) &&
-            ((this.email==null && other.getEmail()==null) || 
-             (this.email!=null &&
-              this.email.equals(other.getEmail()))) &&
-            ((this.logradouro==null && other.getLogradouro()==null) || 
-             (this.logradouro!=null &&
-              this.logradouro.equals(other.getLogradouro()))) &&
-            ((this.nome==null && other.getNome()==null) || 
-             (this.nome!=null &&
-              this.nome.equals(other.getNome()))) &&
-            ((this.numero==null && other.getNumero()==null) || 
-             (this.numero!=null &&
-              this.numero.equals(other.getNumero()))) &&
-            ((this.referencia==null && other.getReferencia()==null) || 
-             (this.referencia!=null &&
-              this.referencia.equals(other.getReferencia()))) &&
-            ((this.telefone==null && other.getTelefone()==null) || 
-             (this.telefone!=null &&
-              this.telefone.equals(other.getTelefone()))) &&
-            ((this.uf==null && other.getUf()==null) || 
-             (this.uf!=null &&
-              this.uf.equals(other.getUf())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBairro() != null) {
-            _hashCode += getBairro().hashCode();
-        }
-        if (getCep() != null) {
-            _hashCode += getCep().hashCode();
-        }
-        if (getCidade() != null) {
-            _hashCode += getCidade().hashCode();
-        }
-        if (getComplemento() != null) {
-            _hashCode += getComplemento().hashCode();
-        }
-        if (getDdd() != null) {
-            _hashCode += getDdd().hashCode();
-        }
-        if (getEmail() != null) {
-            _hashCode += getEmail().hashCode();
-        }
-        if (getLogradouro() != null) {
-            _hashCode += getLogradouro().hashCode();
-        }
-        if (getNome() != null) {
-            _hashCode += getNome().hashCode();
-        }
-        if (getNumero() != null) {
-            _hashCode += getNumero().hashCode();
-        }
-        if (getReferencia() != null) {
-            _hashCode += getReferencia().hashCode();
-        }
-        if (getTelefone() != null) {
-            _hashCode += getTelefone().hashCode();
-        }
-        if (getUf() != null) {
-            _hashCode += getUf().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PessoaTO.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "pessoaTO"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("bairro");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "bairro"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cep");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cep"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cidade");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "cidade"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("complemento");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "complemento"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ddd");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "ddd"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("email");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "email"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logradouro");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "logradouro"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nome");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "nome"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numero");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "numero"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("referencia");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "referencia"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("telefone");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "telefone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("uf");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "uf"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUf(String value) {
+        this.uf = value;
     }
 
 }

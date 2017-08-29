@@ -8,8 +8,8 @@
 </head>
 <body>
 <label>CEP: </label>
-<%-- <% String sCEP = request.getParameter("cep");
+<% String sCEP = request.getParameter("cep");
 out.print(sCEP);
-%> --%>
+%>
 </body>
 </html>

@@ -1,576 +1,388 @@
-/**
- * ServicoERP.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ServicoERP  implements java.io.Serializable {
-    private java.lang.String codigo;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private java.util.Calendar dataAtualizacao;
 
-    private java.lang.Integer datajAtualizacao;
+/**
+ * <p>Java class for servicoERP complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="servicoERP">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="datajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="descricao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="horajAtualizacao" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="servicoSigep" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}servicoSigep" minOccurs="0"/>
+ *         &lt;element name="servicosAdicionais" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}servicoAdicionalERP" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="tipo1Codigo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tipo1Descricao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tipo2Codigo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tipo2Descricao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="vigencia" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}vigenciaERP" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "servicoERP", propOrder = {
+    "codigo",
+    "dataAtualizacao",
+    "datajAtualizacao",
+    "descricao",
+    "horajAtualizacao",
+    "id",
+    "servicoSigep",
+    "servicosAdicionais",
+    "tipo1Codigo",
+    "tipo1Descricao",
+    "tipo2Codigo",
+    "tipo2Descricao",
+    "vigencia"
+})
+public class ServicoERP {
 
-    private java.lang.String descricao;
-
-    private java.lang.Integer horajAtualizacao;
-
-    private long id;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep servicoSigep;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP[] servicosAdicionais;
-
-    private java.lang.String tipo1Codigo;
-
-    private java.lang.String tipo1Descricao;
-
-    private java.lang.String tipo2Codigo;
-
-    private java.lang.String tipo2Descricao;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.VigenciaERP vigencia;
-
-    public ServicoERP() {
-    }
-
-    public ServicoERP(
-           java.lang.String codigo,
-           java.util.Calendar dataAtualizacao,
-           java.lang.Integer datajAtualizacao,
-           java.lang.String descricao,
-           java.lang.Integer horajAtualizacao,
-           long id,
-           br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep servicoSigep,
-           br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP[] servicosAdicionais,
-           java.lang.String tipo1Codigo,
-           java.lang.String tipo1Descricao,
-           java.lang.String tipo2Codigo,
-           java.lang.String tipo2Descricao,
-           br.com.correios.bsb.sigep.master.bean.cliente.VigenciaERP vigencia) {
-           this.codigo = codigo;
-           this.dataAtualizacao = dataAtualizacao;
-           this.datajAtualizacao = datajAtualizacao;
-           this.descricao = descricao;
-           this.horajAtualizacao = horajAtualizacao;
-           this.id = id;
-           this.servicoSigep = servicoSigep;
-           this.servicosAdicionais = servicosAdicionais;
-           this.tipo1Codigo = tipo1Codigo;
-           this.tipo1Descricao = tipo1Descricao;
-           this.tipo2Codigo = tipo2Codigo;
-           this.tipo2Descricao = tipo2Descricao;
-           this.vigencia = vigencia;
-    }
-
+    protected String codigo;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataAtualizacao;
+    protected Integer datajAtualizacao;
+    protected String descricao;
+    protected Integer horajAtualizacao;
+    protected long id;
+    protected ServicoSigep servicoSigep;
+    @XmlElement(nillable = true)
+    protected List<ServicoAdicionalERP> servicosAdicionais;
+    protected String tipo1Codigo;
+    protected String tipo1Descricao;
+    protected String tipo2Codigo;
+    protected String tipo2Descricao;
+    protected VigenciaERP vigencia;
 
     /**
-     * Gets the codigo value for this ServicoERP.
+     * Gets the value of the codigo property.
      * 
-     * @return codigo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-
     /**
-     * Sets the codigo value for this ServicoERP.
+     * Sets the value of the codigo property.
      * 
-     * @param codigo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigo(java.lang.String codigo) {
-        this.codigo = codigo;
+    public void setCodigo(String value) {
+        this.codigo = value;
     }
 
-
     /**
-     * Gets the dataAtualizacao value for this ServicoERP.
+     * Gets the value of the dataAtualizacao property.
      * 
-     * @return dataAtualizacao
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataAtualizacao() {
+    public XMLGregorianCalendar getDataAtualizacao() {
         return dataAtualizacao;
     }
 
-
     /**
-     * Sets the dataAtualizacao value for this ServicoERP.
+     * Sets the value of the dataAtualizacao property.
      * 
-     * @param dataAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataAtualizacao(java.util.Calendar dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
+    public void setDataAtualizacao(XMLGregorianCalendar value) {
+        this.dataAtualizacao = value;
     }
 
-
     /**
-     * Gets the datajAtualizacao value for this ServicoERP.
+     * Gets the value of the datajAtualizacao property.
      * 
-     * @return datajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getDatajAtualizacao() {
+    public Integer getDatajAtualizacao() {
         return datajAtualizacao;
     }
 
-
     /**
-     * Sets the datajAtualizacao value for this ServicoERP.
+     * Sets the value of the datajAtualizacao property.
      * 
-     * @param datajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDatajAtualizacao(java.lang.Integer datajAtualizacao) {
-        this.datajAtualizacao = datajAtualizacao;
+    public void setDatajAtualizacao(Integer value) {
+        this.datajAtualizacao = value;
     }
 
-
     /**
-     * Gets the descricao value for this ServicoERP.
+     * Gets the value of the descricao property.
      * 
-     * @return descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-
     /**
-     * Sets the descricao value for this ServicoERP.
+     * Sets the value of the descricao property.
      * 
-     * @param descricao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescricao(java.lang.String descricao) {
-        this.descricao = descricao;
+    public void setDescricao(String value) {
+        this.descricao = value;
     }
 
-
     /**
-     * Gets the horajAtualizacao value for this ServicoERP.
+     * Gets the value of the horajAtualizacao property.
      * 
-     * @return horajAtualizacao
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getHorajAtualizacao() {
+    public Integer getHorajAtualizacao() {
         return horajAtualizacao;
     }
 
-
     /**
-     * Sets the horajAtualizacao value for this ServicoERP.
+     * Sets the value of the horajAtualizacao property.
      * 
-     * @param horajAtualizacao
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setHorajAtualizacao(java.lang.Integer horajAtualizacao) {
-        this.horajAtualizacao = horajAtualizacao;
+    public void setHorajAtualizacao(Integer value) {
+        this.horajAtualizacao = value;
     }
 
-
     /**
-     * Gets the id value for this ServicoERP.
+     * Gets the value of the id property.
      * 
-     * @return id
      */
     public long getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this ServicoERP.
+     * Sets the value of the id property.
      * 
-     * @param id
      */
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the servicoSigep value for this ServicoERP.
+     * Gets the value of the servicoSigep property.
      * 
-     * @return servicoSigep
+     * @return
+     *     possible object is
+     *     {@link ServicoSigep }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep getServicoSigep() {
+    public ServicoSigep getServicoSigep() {
         return servicoSigep;
     }
 
+    /**
+     * Sets the value of the servicoSigep property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ServicoSigep }
+     *     
+     */
+    public void setServicoSigep(ServicoSigep value) {
+        this.servicoSigep = value;
+    }
 
     /**
-     * Sets the servicoSigep value for this ServicoERP.
+     * Gets the value of the servicosAdicionais property.
      * 
-     * @param servicoSigep
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the servicosAdicionais property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getServicosAdicionais().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ServicoAdicionalERP }
+     * 
+     * 
      */
-    public void setServicoSigep(br.com.correios.bsb.sigep.master.bean.cliente.ServicoSigep servicoSigep) {
-        this.servicoSigep = servicoSigep;
+    public List<ServicoAdicionalERP> getServicosAdicionais() {
+        if (servicosAdicionais == null) {
+            servicosAdicionais = new ArrayList<ServicoAdicionalERP>();
+        }
+        return this.servicosAdicionais;
     }
-
 
     /**
-     * Gets the servicosAdicionais value for this ServicoERP.
+     * Gets the value of the tipo1Codigo property.
      * 
-     * @return servicosAdicionais
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP[] getServicosAdicionais() {
-        return servicosAdicionais;
-    }
-
-
-    /**
-     * Sets the servicosAdicionais value for this ServicoERP.
-     * 
-     * @param servicosAdicionais
-     */
-    public void setServicosAdicionais(br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP[] servicosAdicionais) {
-        this.servicosAdicionais = servicosAdicionais;
-    }
-
-    public br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP getServicosAdicionais(int i) {
-        return this.servicosAdicionais[i];
-    }
-
-    public void setServicosAdicionais(int i, br.com.correios.bsb.sigep.master.bean.cliente.ServicoAdicionalERP _value) {
-        this.servicosAdicionais[i] = _value;
-    }
-
-
-    /**
-     * Gets the tipo1Codigo value for this ServicoERP.
-     * 
-     * @return tipo1Codigo
-     */
-    public java.lang.String getTipo1Codigo() {
+    public String getTipo1Codigo() {
         return tipo1Codigo;
     }
 
-
     /**
-     * Sets the tipo1Codigo value for this ServicoERP.
+     * Sets the value of the tipo1Codigo property.
      * 
-     * @param tipo1Codigo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo1Codigo(java.lang.String tipo1Codigo) {
-        this.tipo1Codigo = tipo1Codigo;
+    public void setTipo1Codigo(String value) {
+        this.tipo1Codigo = value;
     }
 
-
     /**
-     * Gets the tipo1Descricao value for this ServicoERP.
+     * Gets the value of the tipo1Descricao property.
      * 
-     * @return tipo1Descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipo1Descricao() {
+    public String getTipo1Descricao() {
         return tipo1Descricao;
     }
 
-
     /**
-     * Sets the tipo1Descricao value for this ServicoERP.
+     * Sets the value of the tipo1Descricao property.
      * 
-     * @param tipo1Descricao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo1Descricao(java.lang.String tipo1Descricao) {
-        this.tipo1Descricao = tipo1Descricao;
+    public void setTipo1Descricao(String value) {
+        this.tipo1Descricao = value;
     }
 
-
     /**
-     * Gets the tipo2Codigo value for this ServicoERP.
+     * Gets the value of the tipo2Codigo property.
      * 
-     * @return tipo2Codigo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipo2Codigo() {
+    public String getTipo2Codigo() {
         return tipo2Codigo;
     }
 
-
     /**
-     * Sets the tipo2Codigo value for this ServicoERP.
+     * Sets the value of the tipo2Codigo property.
      * 
-     * @param tipo2Codigo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo2Codigo(java.lang.String tipo2Codigo) {
-        this.tipo2Codigo = tipo2Codigo;
+    public void setTipo2Codigo(String value) {
+        this.tipo2Codigo = value;
     }
 
-
     /**
-     * Gets the tipo2Descricao value for this ServicoERP.
+     * Gets the value of the tipo2Descricao property.
      * 
-     * @return tipo2Descricao
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipo2Descricao() {
+    public String getTipo2Descricao() {
         return tipo2Descricao;
     }
 
-
     /**
-     * Sets the tipo2Descricao value for this ServicoERP.
+     * Sets the value of the tipo2Descricao property.
      * 
-     * @param tipo2Descricao
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo2Descricao(java.lang.String tipo2Descricao) {
-        this.tipo2Descricao = tipo2Descricao;
+    public void setTipo2Descricao(String value) {
+        this.tipo2Descricao = value;
     }
 
-
     /**
-     * Gets the vigencia value for this ServicoERP.
+     * Gets the value of the vigencia property.
      * 
-     * @return vigencia
+     * @return
+     *     possible object is
+     *     {@link VigenciaERP }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.VigenciaERP getVigencia() {
+    public VigenciaERP getVigencia() {
         return vigencia;
     }
 
-
     /**
-     * Sets the vigencia value for this ServicoERP.
+     * Sets the value of the vigencia property.
      * 
-     * @param vigencia
+     * @param value
+     *     allowed object is
+     *     {@link VigenciaERP }
+     *     
      */
-    public void setVigencia(br.com.correios.bsb.sigep.master.bean.cliente.VigenciaERP vigencia) {
-        this.vigencia = vigencia;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ServicoERP)) return false;
-        ServicoERP other = (ServicoERP) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigo==null && other.getCodigo()==null) || 
-             (this.codigo!=null &&
-              this.codigo.equals(other.getCodigo()))) &&
-            ((this.dataAtualizacao==null && other.getDataAtualizacao()==null) || 
-             (this.dataAtualizacao!=null &&
-              this.dataAtualizacao.equals(other.getDataAtualizacao()))) &&
-            ((this.datajAtualizacao==null && other.getDatajAtualizacao()==null) || 
-             (this.datajAtualizacao!=null &&
-              this.datajAtualizacao.equals(other.getDatajAtualizacao()))) &&
-            ((this.descricao==null && other.getDescricao()==null) || 
-             (this.descricao!=null &&
-              this.descricao.equals(other.getDescricao()))) &&
-            ((this.horajAtualizacao==null && other.getHorajAtualizacao()==null) || 
-             (this.horajAtualizacao!=null &&
-              this.horajAtualizacao.equals(other.getHorajAtualizacao()))) &&
-            this.id == other.getId() &&
-            ((this.servicoSigep==null && other.getServicoSigep()==null) || 
-             (this.servicoSigep!=null &&
-              this.servicoSigep.equals(other.getServicoSigep()))) &&
-            ((this.servicosAdicionais==null && other.getServicosAdicionais()==null) || 
-             (this.servicosAdicionais!=null &&
-              java.util.Arrays.equals(this.servicosAdicionais, other.getServicosAdicionais()))) &&
-            ((this.tipo1Codigo==null && other.getTipo1Codigo()==null) || 
-             (this.tipo1Codigo!=null &&
-              this.tipo1Codigo.equals(other.getTipo1Codigo()))) &&
-            ((this.tipo1Descricao==null && other.getTipo1Descricao()==null) || 
-             (this.tipo1Descricao!=null &&
-              this.tipo1Descricao.equals(other.getTipo1Descricao()))) &&
-            ((this.tipo2Codigo==null && other.getTipo2Codigo()==null) || 
-             (this.tipo2Codigo!=null &&
-              this.tipo2Codigo.equals(other.getTipo2Codigo()))) &&
-            ((this.tipo2Descricao==null && other.getTipo2Descricao()==null) || 
-             (this.tipo2Descricao!=null &&
-              this.tipo2Descricao.equals(other.getTipo2Descricao()))) &&
-            ((this.vigencia==null && other.getVigencia()==null) || 
-             (this.vigencia!=null &&
-              this.vigencia.equals(other.getVigencia())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigo() != null) {
-            _hashCode += getCodigo().hashCode();
-        }
-        if (getDataAtualizacao() != null) {
-            _hashCode += getDataAtualizacao().hashCode();
-        }
-        if (getDatajAtualizacao() != null) {
-            _hashCode += getDatajAtualizacao().hashCode();
-        }
-        if (getDescricao() != null) {
-            _hashCode += getDescricao().hashCode();
-        }
-        if (getHorajAtualizacao() != null) {
-            _hashCode += getHorajAtualizacao().hashCode();
-        }
-        _hashCode += new Long(getId()).hashCode();
-        if (getServicoSigep() != null) {
-            _hashCode += getServicoSigep().hashCode();
-        }
-        if (getServicosAdicionais() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getServicosAdicionais());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getServicosAdicionais(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTipo1Codigo() != null) {
-            _hashCode += getTipo1Codigo().hashCode();
-        }
-        if (getTipo1Descricao() != null) {
-            _hashCode += getTipo1Descricao().hashCode();
-        }
-        if (getTipo2Codigo() != null) {
-            _hashCode += getTipo2Codigo().hashCode();
-        }
-        if (getTipo2Descricao() != null) {
-            _hashCode += getTipo2Descricao().hashCode();
-        }
-        if (getVigencia() != null) {
-            _hashCode += getVigencia().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ServicoERP.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoERP"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "datajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("descricao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "descricao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("horajAtualizacao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "horajAtualizacao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servicoSigep");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servicoSigep"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoSigep"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("servicosAdicionais");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "servicosAdicionais"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "servicoAdicionalERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo1Codigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo1Codigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo1Descricao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo1Descricao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo2Codigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo2Codigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo2Descricao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo2Descricao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("vigencia");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "vigencia"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "vigenciaERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVigencia(VigenciaERP value) {
+        this.vigencia = value;
     }
 
 }

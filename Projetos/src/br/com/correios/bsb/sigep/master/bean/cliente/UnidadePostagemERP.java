@@ -1,305 +1,195 @@
-/**
- * UnidadePostagemERP.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class UnidadePostagemERP  implements java.io.Serializable {
-    private java.lang.String diretoriaRegional;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP endereco;
 
-    private java.lang.String id;
+/**
+ * <p>Java class for unidadePostagemERP complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="unidadePostagemERP">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="diretoriaRegional" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="endereco" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}enderecoERP" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tipo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "unidadePostagemERP", propOrder = {
+    "diretoriaRegional",
+    "endereco",
+    "id",
+    "nome",
+    "status",
+    "tipo"
+})
+public class UnidadePostagemERP {
 
-    private java.lang.String nome;
-
-    private java.lang.String status;
-
-    private java.lang.String tipo;
-
-    public UnidadePostagemERP() {
-    }
-
-    public UnidadePostagemERP(
-           java.lang.String diretoriaRegional,
-           br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP endereco,
-           java.lang.String id,
-           java.lang.String nome,
-           java.lang.String status,
-           java.lang.String tipo) {
-           this.diretoriaRegional = diretoriaRegional;
-           this.endereco = endereco;
-           this.id = id;
-           this.nome = nome;
-           this.status = status;
-           this.tipo = tipo;
-    }
-
+    protected String diretoriaRegional;
+    protected EnderecoERP endereco;
+    protected String id;
+    protected String nome;
+    protected String status;
+    protected String tipo;
 
     /**
-     * Gets the diretoriaRegional value for this UnidadePostagemERP.
+     * Gets the value of the diretoriaRegional property.
      * 
-     * @return diretoriaRegional
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDiretoriaRegional() {
+    public String getDiretoriaRegional() {
         return diretoriaRegional;
     }
 
-
     /**
-     * Sets the diretoriaRegional value for this UnidadePostagemERP.
+     * Sets the value of the diretoriaRegional property.
      * 
-     * @param diretoriaRegional
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDiretoriaRegional(java.lang.String diretoriaRegional) {
-        this.diretoriaRegional = diretoriaRegional;
+    public void setDiretoriaRegional(String value) {
+        this.diretoriaRegional = value;
     }
 
-
     /**
-     * Gets the endereco value for this UnidadePostagemERP.
+     * Gets the value of the endereco property.
      * 
-     * @return endereco
+     * @return
+     *     possible object is
+     *     {@link EnderecoERP }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP getEndereco() {
+    public EnderecoERP getEndereco() {
         return endereco;
     }
 
-
     /**
-     * Sets the endereco value for this UnidadePostagemERP.
+     * Sets the value of the endereco property.
      * 
-     * @param endereco
+     * @param value
+     *     allowed object is
+     *     {@link EnderecoERP }
+     *     
      */
-    public void setEndereco(br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP endereco) {
-        this.endereco = endereco;
+    public void setEndereco(EnderecoERP value) {
+        this.endereco = value;
     }
 
-
     /**
-     * Gets the id value for this UnidadePostagemERP.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this UnidadePostagemERP.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the nome value for this UnidadePostagemERP.
+     * Gets the value of the nome property.
      * 
-     * @return nome
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNome() {
+    public String getNome() {
         return nome;
     }
 
-
     /**
-     * Sets the nome value for this UnidadePostagemERP.
+     * Sets the value of the nome property.
      * 
-     * @param nome
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNome(java.lang.String nome) {
-        this.nome = nome;
+    public void setNome(String value) {
+        this.nome = value;
     }
 
-
     /**
-     * Gets the status value for this UnidadePostagemERP.
+     * Gets the value of the status property.
      * 
-     * @return status
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatus() {
+    public String getStatus() {
         return status;
     }
 
-
     /**
-     * Sets the status value for this UnidadePostagemERP.
+     * Sets the value of the status property.
      * 
-     * @param status
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatus(java.lang.String status) {
-        this.status = status;
+    public void setStatus(String value) {
+        this.status = value;
     }
 
-
     /**
-     * Gets the tipo value for this UnidadePostagemERP.
+     * Gets the value of the tipo property.
      * 
-     * @return tipo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-
     /**
-     * Sets the tipo value for this UnidadePostagemERP.
+     * Sets the value of the tipo property.
      * 
-     * @param tipo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTipo(java.lang.String tipo) {
-        this.tipo = tipo;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof UnidadePostagemERP)) return false;
-        UnidadePostagemERP other = (UnidadePostagemERP) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.diretoriaRegional==null && other.getDiretoriaRegional()==null) || 
-             (this.diretoriaRegional!=null &&
-              this.diretoriaRegional.equals(other.getDiretoriaRegional()))) &&
-            ((this.endereco==null && other.getEndereco()==null) || 
-             (this.endereco!=null &&
-              this.endereco.equals(other.getEndereco()))) &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.nome==null && other.getNome()==null) || 
-             (this.nome!=null &&
-              this.nome.equals(other.getNome()))) &&
-            ((this.status==null && other.getStatus()==null) || 
-             (this.status!=null &&
-              this.status.equals(other.getStatus()))) &&
-            ((this.tipo==null && other.getTipo()==null) || 
-             (this.tipo!=null &&
-              this.tipo.equals(other.getTipo())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDiretoriaRegional() != null) {
-            _hashCode += getDiretoriaRegional().hashCode();
-        }
-        if (getEndereco() != null) {
-            _hashCode += getEndereco().hashCode();
-        }
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getNome() != null) {
-            _hashCode += getNome().hashCode();
-        }
-        if (getStatus() != null) {
-            _hashCode += getStatus().hashCode();
-        }
-        if (getTipo() != null) {
-            _hashCode += getTipo().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(UnidadePostagemERP.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "unidadePostagemERP"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("diretoriaRegional");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "diretoriaRegional"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("endereco");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "endereco"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "enderecoERP"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nome");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "nome"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("status");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "status"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tipo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "tipo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTipo(String value) {
+        this.tipo = value;
     }
 
 }

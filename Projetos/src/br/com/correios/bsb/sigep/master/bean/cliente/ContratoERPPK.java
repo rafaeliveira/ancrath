@@ -1,152 +1,79 @@
-/**
- * ContratoERPPK.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ContratoERPPK  implements java.io.Serializable {
-    private long diretoria;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String numero;
 
-    public ContratoERPPK() {
-    }
+/**
+ * <p>Java class for contratoERPPK complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="contratoERPPK">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="diretoria" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "contratoERPPK", propOrder = {
+    "diretoria",
+    "numero"
+})
+public class ContratoERPPK {
 
-    public ContratoERPPK(
-           long diretoria,
-           java.lang.String numero) {
-           this.diretoria = diretoria;
-           this.numero = numero;
-    }
-
+    protected long diretoria;
+    protected String numero;
 
     /**
-     * Gets the diretoria value for this ContratoERPPK.
+     * Gets the value of the diretoria property.
      * 
-     * @return diretoria
      */
     public long getDiretoria() {
         return diretoria;
     }
 
-
     /**
-     * Sets the diretoria value for this ContratoERPPK.
+     * Sets the value of the diretoria property.
      * 
-     * @param diretoria
      */
-    public void setDiretoria(long diretoria) {
-        this.diretoria = diretoria;
+    public void setDiretoria(long value) {
+        this.diretoria = value;
     }
 
-
     /**
-     * Gets the numero value for this ContratoERPPK.
+     * Gets the value of the numero property.
      * 
-     * @return numero
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-
     /**
-     * Sets the numero value for this ContratoERPPK.
+     * Sets the value of the numero property.
      * 
-     * @param numero
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNumero(java.lang.String numero) {
-        this.numero = numero;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ContratoERPPK)) return false;
-        ContratoERPPK other = (ContratoERPPK) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.diretoria == other.getDiretoria() &&
-            ((this.numero==null && other.getNumero()==null) || 
-             (this.numero!=null &&
-              this.numero.equals(other.getNumero())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += new Long(getDiretoria()).hashCode();
-        if (getNumero() != null) {
-            _hashCode += getNumero().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ContratoERPPK.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "contratoERPPK"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("diretoria");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "diretoria"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numero");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "numero"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setNumero(String value) {
+        this.numero = value;
     }
 
 }

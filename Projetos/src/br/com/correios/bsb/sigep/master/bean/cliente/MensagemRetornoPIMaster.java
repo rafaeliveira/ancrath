@@ -1,157 +1,87 @@
-/**
- * MensagemRetornoPIMaster.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class MensagemRetornoPIMaster  implements java.io.Serializable {
-    private java.lang.Integer codigo;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String mensagem;
 
-    public MensagemRetornoPIMaster() {
-    }
+/**
+ * <p>Java class for mensagemRetornoPIMaster complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="mensagemRetornoPIMaster">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="mensagem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "mensagemRetornoPIMaster", propOrder = {
+    "codigo",
+    "mensagem"
+})
+public class MensagemRetornoPIMaster {
 
-    public MensagemRetornoPIMaster(
-           java.lang.Integer codigo,
-           java.lang.String mensagem) {
-           this.codigo = codigo;
-           this.mensagem = mensagem;
-    }
-
+    protected Integer codigo;
+    protected String mensagem;
 
     /**
-     * Gets the codigo value for this MensagemRetornoPIMaster.
+     * Gets the value of the codigo property.
      * 
-     * @return codigo
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-
     /**
-     * Sets the codigo value for this MensagemRetornoPIMaster.
+     * Sets the value of the codigo property.
      * 
-     * @param codigo
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setCodigo(java.lang.Integer codigo) {
-        this.codigo = codigo;
+    public void setCodigo(Integer value) {
+        this.codigo = value;
     }
 
-
     /**
-     * Gets the mensagem value for this MensagemRetornoPIMaster.
+     * Gets the value of the mensagem property.
      * 
-     * @return mensagem
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMensagem() {
+    public String getMensagem() {
         return mensagem;
     }
 
-
     /**
-     * Sets the mensagem value for this MensagemRetornoPIMaster.
+     * Sets the value of the mensagem property.
      * 
-     * @param mensagem
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMensagem(java.lang.String mensagem) {
-        this.mensagem = mensagem;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof MensagemRetornoPIMaster)) return false;
-        MensagemRetornoPIMaster other = (MensagemRetornoPIMaster) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigo==null && other.getCodigo()==null) || 
-             (this.codigo!=null &&
-              this.codigo.equals(other.getCodigo()))) &&
-            ((this.mensagem==null && other.getMensagem()==null) || 
-             (this.mensagem!=null &&
-              this.mensagem.equals(other.getMensagem())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigo() != null) {
-            _hashCode += getCodigo().hashCode();
-        }
-        if (getMensagem() != null) {
-            _hashCode += getMensagem().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(MensagemRetornoPIMaster.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "mensagemRetornoPIMaster"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mensagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "mensagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setMensagem(String value) {
+        this.mensagem = value;
     }
 
 }

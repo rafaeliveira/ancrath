@@ -1,379 +1,254 @@
-/**
- * ObjetoPostal.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package br.com.correios.bsb.sigep.master.bean.cliente;
 
-public class ObjetoPostal  implements java.io.Serializable {
-    private java.lang.String codigoEtiqueta;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private java.util.Calendar dataAtualizacaoCliente;
 
-    private java.util.Calendar dataCancelamentoEtiqueta;
+/**
+ * <p>Java class for objetoPostal complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="objetoPostal">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="codigoEtiqueta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dataAtualizacaoCliente" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataCancelamentoEtiqueta" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataInclusao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="objetoPostalPK" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}objetoPostalPK" minOccurs="0"/>
+ *         &lt;element name="plpNu" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="preListaPostagem" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}preListaPostagem" minOccurs="0"/>
+ *         &lt;element name="statusEtiqueta" type="{http://cliente.bean.master.sigep.bsb.correios.com.br/}statusObjetoPostal" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "objetoPostal", propOrder = {
+    "codigoEtiqueta",
+    "dataAtualizacaoCliente",
+    "dataCancelamentoEtiqueta",
+    "dataInclusao",
+    "objetoPostalPK",
+    "plpNu",
+    "preListaPostagem",
+    "statusEtiqueta"
+})
+public class ObjetoPostal {
 
-    private java.util.Calendar dataInclusao;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.ObjetoPostalPK objetoPostalPK;
-
-    private java.lang.Long plpNu;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.PreListaPostagem preListaPostagem;
-
-    private br.com.correios.bsb.sigep.master.bean.cliente.StatusObjetoPostal statusEtiqueta;
-
-    public ObjetoPostal() {
-    }
-
-    public ObjetoPostal(
-           java.lang.String codigoEtiqueta,
-           java.util.Calendar dataAtualizacaoCliente,
-           java.util.Calendar dataCancelamentoEtiqueta,
-           java.util.Calendar dataInclusao,
-           br.com.correios.bsb.sigep.master.bean.cliente.ObjetoPostalPK objetoPostalPK,
-           java.lang.Long plpNu,
-           br.com.correios.bsb.sigep.master.bean.cliente.PreListaPostagem preListaPostagem,
-           br.com.correios.bsb.sigep.master.bean.cliente.StatusObjetoPostal statusEtiqueta) {
-           this.codigoEtiqueta = codigoEtiqueta;
-           this.dataAtualizacaoCliente = dataAtualizacaoCliente;
-           this.dataCancelamentoEtiqueta = dataCancelamentoEtiqueta;
-           this.dataInclusao = dataInclusao;
-           this.objetoPostalPK = objetoPostalPK;
-           this.plpNu = plpNu;
-           this.preListaPostagem = preListaPostagem;
-           this.statusEtiqueta = statusEtiqueta;
-    }
-
+    protected String codigoEtiqueta;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataAtualizacaoCliente;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataCancelamentoEtiqueta;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataInclusao;
+    protected ObjetoPostalPK objetoPostalPK;
+    protected Long plpNu;
+    protected PreListaPostagem preListaPostagem;
+    protected StatusObjetoPostal statusEtiqueta;
 
     /**
-     * Gets the codigoEtiqueta value for this ObjetoPostal.
+     * Gets the value of the codigoEtiqueta property.
      * 
-     * @return codigoEtiqueta
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCodigoEtiqueta() {
+    public String getCodigoEtiqueta() {
         return codigoEtiqueta;
     }
 
-
     /**
-     * Sets the codigoEtiqueta value for this ObjetoPostal.
+     * Sets the value of the codigoEtiqueta property.
      * 
-     * @param codigoEtiqueta
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCodigoEtiqueta(java.lang.String codigoEtiqueta) {
-        this.codigoEtiqueta = codigoEtiqueta;
+    public void setCodigoEtiqueta(String value) {
+        this.codigoEtiqueta = value;
     }
 
-
     /**
-     * Gets the dataAtualizacaoCliente value for this ObjetoPostal.
+     * Gets the value of the dataAtualizacaoCliente property.
      * 
-     * @return dataAtualizacaoCliente
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataAtualizacaoCliente() {
+    public XMLGregorianCalendar getDataAtualizacaoCliente() {
         return dataAtualizacaoCliente;
     }
 
-
     /**
-     * Sets the dataAtualizacaoCliente value for this ObjetoPostal.
+     * Sets the value of the dataAtualizacaoCliente property.
      * 
-     * @param dataAtualizacaoCliente
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataAtualizacaoCliente(java.util.Calendar dataAtualizacaoCliente) {
-        this.dataAtualizacaoCliente = dataAtualizacaoCliente;
+    public void setDataAtualizacaoCliente(XMLGregorianCalendar value) {
+        this.dataAtualizacaoCliente = value;
     }
 
-
     /**
-     * Gets the dataCancelamentoEtiqueta value for this ObjetoPostal.
+     * Gets the value of the dataCancelamentoEtiqueta property.
      * 
-     * @return dataCancelamentoEtiqueta
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataCancelamentoEtiqueta() {
+    public XMLGregorianCalendar getDataCancelamentoEtiqueta() {
         return dataCancelamentoEtiqueta;
     }
 
-
     /**
-     * Sets the dataCancelamentoEtiqueta value for this ObjetoPostal.
+     * Sets the value of the dataCancelamentoEtiqueta property.
      * 
-     * @param dataCancelamentoEtiqueta
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataCancelamentoEtiqueta(java.util.Calendar dataCancelamentoEtiqueta) {
-        this.dataCancelamentoEtiqueta = dataCancelamentoEtiqueta;
+    public void setDataCancelamentoEtiqueta(XMLGregorianCalendar value) {
+        this.dataCancelamentoEtiqueta = value;
     }
 
-
     /**
-     * Gets the dataInclusao value for this ObjetoPostal.
+     * Gets the value of the dataInclusao property.
      * 
-     * @return dataInclusao
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getDataInclusao() {
+    public XMLGregorianCalendar getDataInclusao() {
         return dataInclusao;
     }
 
-
     /**
-     * Sets the dataInclusao value for this ObjetoPostal.
+     * Sets the value of the dataInclusao property.
      * 
-     * @param dataInclusao
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDataInclusao(java.util.Calendar dataInclusao) {
-        this.dataInclusao = dataInclusao;
+    public void setDataInclusao(XMLGregorianCalendar value) {
+        this.dataInclusao = value;
     }
 
-
     /**
-     * Gets the objetoPostalPK value for this ObjetoPostal.
+     * Gets the value of the objetoPostalPK property.
      * 
-     * @return objetoPostalPK
+     * @return
+     *     possible object is
+     *     {@link ObjetoPostalPK }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.ObjetoPostalPK getObjetoPostalPK() {
+    public ObjetoPostalPK getObjetoPostalPK() {
         return objetoPostalPK;
     }
 
-
     /**
-     * Sets the objetoPostalPK value for this ObjetoPostal.
+     * Sets the value of the objetoPostalPK property.
      * 
-     * @param objetoPostalPK
+     * @param value
+     *     allowed object is
+     *     {@link ObjetoPostalPK }
+     *     
      */
-    public void setObjetoPostalPK(br.com.correios.bsb.sigep.master.bean.cliente.ObjetoPostalPK objetoPostalPK) {
-        this.objetoPostalPK = objetoPostalPK;
+    public void setObjetoPostalPK(ObjetoPostalPK value) {
+        this.objetoPostalPK = value;
     }
 
-
     /**
-     * Gets the plpNu value for this ObjetoPostal.
+     * Gets the value of the plpNu property.
      * 
-     * @return plpNu
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public java.lang.Long getPlpNu() {
+    public Long getPlpNu() {
         return plpNu;
     }
 
-
     /**
-     * Sets the plpNu value for this ObjetoPostal.
+     * Sets the value of the plpNu property.
      * 
-     * @param plpNu
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setPlpNu(java.lang.Long plpNu) {
-        this.plpNu = plpNu;
+    public void setPlpNu(Long value) {
+        this.plpNu = value;
     }
 
-
     /**
-     * Gets the preListaPostagem value for this ObjetoPostal.
+     * Gets the value of the preListaPostagem property.
      * 
-     * @return preListaPostagem
+     * @return
+     *     possible object is
+     *     {@link PreListaPostagem }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.PreListaPostagem getPreListaPostagem() {
+    public PreListaPostagem getPreListaPostagem() {
         return preListaPostagem;
     }
 
-
     /**
-     * Sets the preListaPostagem value for this ObjetoPostal.
+     * Sets the value of the preListaPostagem property.
      * 
-     * @param preListaPostagem
+     * @param value
+     *     allowed object is
+     *     {@link PreListaPostagem }
+     *     
      */
-    public void setPreListaPostagem(br.com.correios.bsb.sigep.master.bean.cliente.PreListaPostagem preListaPostagem) {
-        this.preListaPostagem = preListaPostagem;
+    public void setPreListaPostagem(PreListaPostagem value) {
+        this.preListaPostagem = value;
     }
 
-
     /**
-     * Gets the statusEtiqueta value for this ObjetoPostal.
+     * Gets the value of the statusEtiqueta property.
      * 
-     * @return statusEtiqueta
+     * @return
+     *     possible object is
+     *     {@link StatusObjetoPostal }
+     *     
      */
-    public br.com.correios.bsb.sigep.master.bean.cliente.StatusObjetoPostal getStatusEtiqueta() {
+    public StatusObjetoPostal getStatusEtiqueta() {
         return statusEtiqueta;
     }
 
-
     /**
-     * Sets the statusEtiqueta value for this ObjetoPostal.
+     * Sets the value of the statusEtiqueta property.
      * 
-     * @param statusEtiqueta
+     * @param value
+     *     allowed object is
+     *     {@link StatusObjetoPostal }
+     *     
      */
-    public void setStatusEtiqueta(br.com.correios.bsb.sigep.master.bean.cliente.StatusObjetoPostal statusEtiqueta) {
-        this.statusEtiqueta = statusEtiqueta;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ObjetoPostal)) return false;
-        ObjetoPostal other = (ObjetoPostal) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.codigoEtiqueta==null && other.getCodigoEtiqueta()==null) || 
-             (this.codigoEtiqueta!=null &&
-              this.codigoEtiqueta.equals(other.getCodigoEtiqueta()))) &&
-            ((this.dataAtualizacaoCliente==null && other.getDataAtualizacaoCliente()==null) || 
-             (this.dataAtualizacaoCliente!=null &&
-              this.dataAtualizacaoCliente.equals(other.getDataAtualizacaoCliente()))) &&
-            ((this.dataCancelamentoEtiqueta==null && other.getDataCancelamentoEtiqueta()==null) || 
-             (this.dataCancelamentoEtiqueta!=null &&
-              this.dataCancelamentoEtiqueta.equals(other.getDataCancelamentoEtiqueta()))) &&
-            ((this.dataInclusao==null && other.getDataInclusao()==null) || 
-             (this.dataInclusao!=null &&
-              this.dataInclusao.equals(other.getDataInclusao()))) &&
-            ((this.objetoPostalPK==null && other.getObjetoPostalPK()==null) || 
-             (this.objetoPostalPK!=null &&
-              this.objetoPostalPK.equals(other.getObjetoPostalPK()))) &&
-            ((this.plpNu==null && other.getPlpNu()==null) || 
-             (this.plpNu!=null &&
-              this.plpNu.equals(other.getPlpNu()))) &&
-            ((this.preListaPostagem==null && other.getPreListaPostagem()==null) || 
-             (this.preListaPostagem!=null &&
-              this.preListaPostagem.equals(other.getPreListaPostagem()))) &&
-            ((this.statusEtiqueta==null && other.getStatusEtiqueta()==null) || 
-             (this.statusEtiqueta!=null &&
-              this.statusEtiqueta.equals(other.getStatusEtiqueta())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCodigoEtiqueta() != null) {
-            _hashCode += getCodigoEtiqueta().hashCode();
-        }
-        if (getDataAtualizacaoCliente() != null) {
-            _hashCode += getDataAtualizacaoCliente().hashCode();
-        }
-        if (getDataCancelamentoEtiqueta() != null) {
-            _hashCode += getDataCancelamentoEtiqueta().hashCode();
-        }
-        if (getDataInclusao() != null) {
-            _hashCode += getDataInclusao().hashCode();
-        }
-        if (getObjetoPostalPK() != null) {
-            _hashCode += getObjetoPostalPK().hashCode();
-        }
-        if (getPlpNu() != null) {
-            _hashCode += getPlpNu().hashCode();
-        }
-        if (getPreListaPostagem() != null) {
-            _hashCode += getPreListaPostagem().hashCode();
-        }
-        if (getStatusEtiqueta() != null) {
-            _hashCode += getStatusEtiqueta().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ObjetoPostal.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoPostal"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("codigoEtiqueta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "codigoEtiqueta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataAtualizacaoCliente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataAtualizacaoCliente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataCancelamentoEtiqueta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataCancelamentoEtiqueta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataInclusao");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "dataInclusao"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("objetoPostalPK");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "objetoPostalPK"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "objetoPostalPK"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("plpNu");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "plpNu"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("preListaPostagem");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "preListaPostagem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "preListaPostagem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statusEtiqueta");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "statusEtiqueta"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://cliente.bean.master.sigep.bsb.correios.com.br/", "statusObjetoPostal"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStatusEtiqueta(StatusObjetoPostal value) {
+        this.statusEtiqueta = value;
     }
 
 }
