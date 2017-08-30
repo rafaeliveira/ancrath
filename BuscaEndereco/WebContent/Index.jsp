@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Consulta de Endereco</title>
 </head>
 <body>
-<form action="ConsultaWebService.jsp" method="get">
+<form action="ConsultaWebService.jsp" method="post">
 <label>CEP: </label><input type="text" name="cep" placeholder="00000-000" required pattern="\d{5}-?\d{3}"/>
 <button type="submit" name="buscar" width="300">Buscar</button>
 </form>

@@ -7,7 +7,7 @@
 <%
  try
 {
-	 String sCep = "04829200";//request.getParameter("cep");
+	 String sCep = request.getParameter("cep");
 	 AtendeClienteService service = new AtendeClienteService();
 	 
 	 AtendeCliente port = service.getAtendeClientePort();
