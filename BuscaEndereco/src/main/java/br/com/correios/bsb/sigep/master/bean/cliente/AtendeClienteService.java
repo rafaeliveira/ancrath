@@ -30,7 +30,7 @@ public class AtendeClienteService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/C:/Openlink/Findur_V14_0_08142014MR_08292014_1040/bin/olf_dependencies/java/jdk1.7.0_07/bin/AtendeCliente.wsdl");
+            url = new URL("https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
