@@ -7,10 +7,16 @@
 <%
  try
 {
+	 out.print("Chegou na consulta <br/> <br/>");
+	 
 	 String sCep = request.getParameter("cep");
+	 out.print("Criou a string sCep <br/> <br/>");
+	 
 	 AtendeClienteService service = new AtendeClienteService();
+	 out.print("Criou o servico <br/> <br/>");
 	 
 	 AtendeCliente port = service.getAtendeClientePort();
+	 out.print("Criou a porta <br/> <br/>");
 	 
 	 out.print("Buscando o endereco do CEP "+sCep+ "<br/> <br/>");
 	 
@@ -23,6 +29,6 @@
 }
 catch (Exception e)
 {
-	
+	out.print("Erro: "+e.getMessage());
 }
 %>
